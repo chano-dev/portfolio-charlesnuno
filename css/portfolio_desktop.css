@@ -104,7 +104,7 @@ body {
 }
 .sidebar__tagline {
     font-family: 'Bebas Neue', sans-serif;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     letter-spacing: 0.04em;
     color: var(--color-sub);
     padding: var(--space-sm) var(--space-sm) var(--space-md);
