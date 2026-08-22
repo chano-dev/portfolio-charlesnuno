@@ -1,0 +1,245 @@
+/* ════════════════════════════════════════════
+   PORTFOLIO — DESKTOP & TABLET (min-width: 768px)
+   Applied via: <link media="screen and (min-width: 768px)">
+════════════════════════════════════════════ */
+body {
+    height: 100vh;
+    overflow: hidden;
+    gap: var(--space-lg);
+}
+
+/* ── Navbar: show desktop controls, hide mobile bar ── */
+.navbar {
+    padding: 0 var(--space-2xl);
+    border-bottom: 1px solid var(--color-border);
+    justify-content: space-between;
+}
+.navbar__controls {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+}
+.navbar__mobile { display: none; }
+
+/* ── Drawer: never visible on desktop ── */
+.drawer,
+.drawer-overlay { display: none !important; }
+
+/* ── Mobile TOC card: hidden on desktop ── */
+.toc-mobile { display: none; }
+
+/* ════════════════════════════════════════════
+   3-COLUMN LAYOUT
+════════════════════════════════════════════ */
+.layout {
+    display: grid;
+    grid-template-columns: minmax(150px, 0.5fr) 3fr minmax(150px, 1fr);
+    grid-template-rows: 1fr;
+    align-items: start;
+    height: 100vh;
+    gap: clamp(0.75rem, 3vw, 2.75rem);
+    padding-inline: clamp(1rem, 5vw, 3rem);
+}
+
+/* ── Left sidebar (C1) ── */
+.sidebar--left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    overflow-y: auto;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+    position: sticky;
+    top: var(--navbar-h);
+}
+.sidebar__inner {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+}
+.sidebar__title {
+    font-family: 'Poppins', 'Inter', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--color-sub);
+}
+.sidebar__sections {
+    background: var(--surface);
+    border: 2px solid var(--color-border);
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    padding: var(--space-md) 0;
+}
+.sidebar__section-item {
+    display: flex;
+    flex-direction: column;
+}
+.sidebar__section-btn {
+    width: 100%;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-family: 'Poppins', 'Inter', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--color-sub);
+    padding: var(--space-sm);
+    transition: transform 0.15s, background-color 0.15s, color 0.15s;
+    text-align: left;
+}
+.sidebar__section-btn:hover:not(.is-active) {
+    color: var(--primary);
+    transform: translateX(-15%);
+    font-weight: 600;
+}
+.sidebar__section-btn.is-active {
+    font-weight: 700;
+    color: var(--color-text);
+    border-left: 3.5px solid var(--primary);
+    padding-left: var(--space-sm);
+}
+.sidebar__tagline {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.3rem;
+    letter-spacing: 0.04em;
+    color: var(--color-sub);
+    padding: var(--space-sm) var(--space-sm) var(--space-md);
+    min-height: 1.5rem;
+}
+
+/* ── Center content ── */
+.content {
+    background-color: var(--surface);
+    overflow-y: auto;
+    padding: var(--space-2xl) var(--space-2xl) var(--space-4xl);
+    scroll-behavior: smooth;
+    flex: 1;
+    height: 100%;
+    border-radius: 1rem 1rem 0 0;
+    border: 2px solid var(--color-border);
+    display: block;
+}
+.section {
+    animation: sectionFadeIn 0.5s ease forwards;
+    padding: 0;
+    border: none;
+    gap: var(--space-2xl);
+}
+@keyframes sectionFadeIn {
+    from { opacity: 0; transform: translateY(12px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+.section__title {
+    order: unset;
+    font-size: clamp(1.5rem, 2vw, 2rem);
+    padding-bottom: var(--space-sm);
+    border-bottom: 2px solid var(--color-border);
+}
+.article {
+    background: transparent;
+    border-radius: 0;
+    padding: 0;
+    gap: var(--space-md);
+}
+.article__title { font-size: 1.05rem; }
+.article__text  { font-size: 0.925rem; }
+
+/* ── Right sidebar (C3) ── */
+.sidebar--right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    overflow-y: auto;
+    padding: var(--space-xl) var(--space-md);
+    border-left: 1px solid var(--color-border);
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+    position: sticky;
+    top: var(--navbar-h);
+}
+.toc {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+}
+.toc .toc__title {
+    font-size: 0.75rem;
+    margin-bottom: var(--space-xs);
+}
+.toc__links {
+    background-color: var(--surface);
+    border: 2px solid var(--color-border);
+    border-radius: 0.75rem;
+    padding: var(--space-md) 0;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+.toc__links li a {
+    font-size: 0.8rem;
+    border-left: 2px solid transparent;
+    line-height: 1.4;
+}
+.toc__links li a:hover {
+    background: var(--color-border);
+    border-radius: unset;
+}
+.toc__links li a.is-active {
+    border-left: 3px solid var(--primary);
+    padding-left: calc(var(--space-sm) - 2px);
+    border-radius: unset;
+}
+.sidebar__deco {
+    display: flex;
+    justify-content: center;
+    padding: var(--space-md) 0;
+}
+
+/* ════════════════════════════════════════════
+   COMPONENT ADJUSTMENTS FOR DESKTOP
+════════════════════════════════════════════ */
+.skills-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-sm) var(--space-lg);
+}
+
+.article-skills__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-sm) var(--space-lg);
+}
+
+.social-links {
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.compass-btn { display: none !important; }
+
+.photo-grid { grid-template-columns: repeat(3, 1fr); }
+
+.lightbox__box { max-width: 640px; }
+
+.acrostic {
+    padding: var(--space-lg) var(--space-xl);
+    gap: var(--space-md);
+}
+.acrostic__letter { font-size: 1.5rem; min-width: 1.5rem; }
+.acrostic__skill  { font-size: 1rem; }
+
+/* Ticker — desktop shows 1 and a half, continuous motion via JS */
+.quotes-carousel {
+    border-left: none;
+    border-radius: 0;
+}
+.quotes-track { transition: none; }
+.quote-item {
+    flex: 0 0 calc(62% - var(--space-lg));
+    border-left: 3px solid var(--primary);
+    border-radius: 0 0.5rem 0.5rem 0;
+}

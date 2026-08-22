@@ -1,0 +1,74 @@
+
+body {
+    background-color: var(--fundo);
+    padding: 20px clamp(25px, 5vw, 60px) 0 clamp(25px, 5vw, 60px);
+}
+
+/* Tamanhos de Textos */
+header h1, header h3 {
+    font-size: clamp(1.5rem, 2vw, 2.5rem);
+}
+.cards-label {
+    font-size: 1.25rem;
+}
+footer {
+    font-size: clamp(1rem, 1.5vw, 1.25rem);
+}
+.btn-portfolio {
+    font-size: clamp(1rem, 1.5vw, 1.1rem);
+}
+/* Fim Tamanhos de Textos */
+
+.cards-wrapper {
+    background: var(--divs);
+    border-radius: 1.5rem;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+    padding: clamp(1.5rem, 2vw, 2rem);
+    width: 100%;
+    gap: 1.5rem;
+
+}
+@media screen and (max-width: 1000px) {
+.cards-wrapper {
+    width: fit-content;
+    gap: 1rem;
+}
+}
+.cards-grid {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+
+.btn-portfolio svg {
+    width: clamp(18px, 1.5vw, 20px);
+}
+
+.cards-grid {
+    overflow: hidden;
+    white-space: nowrap;
+}
+.cards-grid article {
+  opacity: 0;
+  transform: translateY(40px);
+  animation: fadeUp 0.8s ease forwards;
+}
+
+/* primeira card vem de cima */
+.cards-grid article:first-child {
+  transform: translateY(-40px);
+  animation-delay: 0.2s;
+}
+
+/* segunda card vem de baixo */
+.cards-grid article:last-child {
+  animation-delay: 0.4s;
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

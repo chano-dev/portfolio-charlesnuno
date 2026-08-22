@@ -1,0 +1,357 @@
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+:root {
+
+    /* Light Mode*/
+    --fundo: #f7f8fa;
+    --divs: #ffffff;
+    --text: #1f2937;
+    --subtext: #6b7280;
+    --border: #e5e7eb;
+
+    /* Dark Mode */
+    --fundo-dark: #0f172a;
+    --divs-dark: #111827;
+    --text-dark: #e5e7eb;
+    --subtext-dark: #9ca3af;
+    --border-dark: #1f2937;
+
+    /* Yellow Palette (Communication) */
+    --yellow-a: #fec936;
+    --yellow-b: #ffd767;
+    --yellow-c: #ffe8a8;
+    --yellow-d: #a77b00;
+
+    /* Red Palette (Programming) */
+    --red-a: #cb002f;
+    --red-b: #e5315b;
+    --red-c: #ed6d8b;
+    --red-d: #72001b;
+
+    /* Botão */
+    --card-dark: #0f172a;
+    --card-btn: #1e293b;
+
+    --space: 8px;
+
+    --space-xs: calc(var(--space) - 4); /* 4 */
+    --space-sm: calc(var(--space) * 1); /* 8 */
+    --space-md: calc(var(--space) * 2); /* 16 */
+    --space-lg: calc(var(--space) * 3); /* 24 */
+    --space-xl: calc(var(--space) * 4); /* 32 */
+    --space-2xl: calc(var(--space) * 6); /* 48 */
+    --space-3xl: calc(var(--space) * 8); /* 64 */
+    --space-4xl: calc(var(--space) * 10); /* 80 */
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+    font-family: 'Inter', 'Segoe UI', sans-serif;
+    background-color: var(--divs);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding: 40px 15px 0px 15px;
+    gap: 1.5rem;
+}
+
+/* ── HEADER ── */
+header {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+header h1 {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text);
+    line-height: 1.2;
+}
+
+header h2 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--text);
+    line-height: 1.2;
+}
+/* Fim Header */
+
+/* ── MAIN ── */
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+/* ── SECTION WRAPPER ── */
+.cards-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.75rem;
+    overflow: auto;
+    white-space: nowrap;
+}
+
+.cards-label {
+    color: var(--subtext);
+    width: 100%;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.4rem;
+    letter-spacing: 0.04em;
+    font-weight: normal;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    min-height: 2rem;
+}
+#text {
+    white-space: nowrap;
+    display: inline-block;
+}
+.cursor {
+    display: inline-block;
+    animation: blink 0.8s infinite;
+}
+
+@keyframes blink {
+    0%, 50%, 100% { opacity: 1; }
+    25%, 75% { opacity: 0; }
+}
+
+.cards-grid {
+    width: 100%;
+    display: inline-flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1.2rem;
+    overflow: auto; 
+}
+
+/* ── ARTICLE (card + button) ── */
+article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.2rem;
+    width: fit-content;
+}
+
+/* ── CARD ── */
+.card {
+    border-radius: 1rem;
+    overflow: hidden;
+    position: relative;
+    background: var(--card-dark);
+}
+
+/* Outer tribal-pattern border */
+.card-border {
+    width: 320px;
+    border-radius: 1.1rem;
+    padding: 10px;
+    cursor: pointer;
+    background: url('../img/samakaka.png') no-repeat center center;
+    background-size: cover;
+    border: 3px solid var(--border);
+    transition: transform 0.15s;
+    animation: float 4s ease-in-out infinite;
+}
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-4px); }
+}
+
+/* Inner card surface */
+.card-inner {
+    border: 3px solid var(--border);
+    background: var(--divs-dark);
+    border-radius: 0.6rem;
+    overflow: hidden;
+}
+
+/* Top bar with icons */
+.card-topbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.6rem 0.75rem;
+}
+
+/* ── ICONS (mask-image technique) ── */
+.card-icon {
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    background-color: #ffffff;
+    -webkit-mask-size: contain;
+    mask-size: contain;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    mask-position: center;
+    transition: background-color 0.2s ease-in-out;
+}
+.icon-communication {
+    -webkit-mask-image: url('../img/icons/communication-icon.svg');
+    mask-image: url('../img/icons/communication-icon.svg');
+}
+.icon-programming {
+    -webkit-mask-image: url('../img/icons/programming-icon.svg');
+    mask-image: url('../img/icons/programming-icon.svg');
+}
+
+article:first-child .card-border:hover .card-icon {
+    background-color: var(--yellow-a);
+}
+article:last-child .card-border:hover .card-icon {
+    background-color: var(--red-a);
+}
+
+/* Card title */
+.card-title {
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #ffffff;
+    padding: 0 0.75rem 0.5rem;
+    letter-spacing: 0.02em;
+    width: 100%;
+    position: relative;
+    z-index: 3;
+    transition: color 0.2s ease-in-out;
+}
+article:first-child .card-border:hover .card-title {
+    color: var(--yellow-a);
+}
+article:last-child .card-border:hover .card-title {
+    color: var(--red-a);
+}
+
+/* ── IMAGE FRAME (Angola map shape via mask-image) ── */
+.card-image-frame {
+    position: relative;
+    margin: 0 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+}
+
+.card-image-frame::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    -webkit-mask-image: url('../img/icons/ao-mapa-icon.svg');
+    mask-image: url('../img/icons/ao-mapa-icon.svg');
+    -webkit-mask-size: contain;
+    mask-size: contain;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    mask-position: center;
+    z-index: 0;
+    transition: background 0.25s ease-in-out;
+}
+
+.cards-grid article:first-child .card-image-frame::before {
+    background: linear-gradient(135deg, var(--yellow-b) 0%, #ffffff 25%, #ffffff 75%, var(--yellow-b) 100%);
+}
+.cards-grid article:first-child .card-border:hover .card-image-frame::before {
+    background: linear-gradient(135deg, var(--yellow-a) 0%, #ffffff 45%, #ffffff 55%, var(--yellow-a) 100%);
+}
+
+.cards-grid article:last-child .card-image-frame::before {
+    background: linear-gradient(135deg, var(--red-b) 0%, #ffffff 25%, #ffffff 75%, var(--red-b) 100%);
+}
+.cards-grid article:last-child .card-border:hover .card-image-frame::before {
+    background: linear-gradient(135deg, var(--red-a) 0%, #ffffff 45%, #ffffff 55%, var(--red-a) 100%);
+}
+
+.card-image-frame img,
+.card-image-frame .card-svg {
+    position: relative;
+    z-index: 2;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+.card-border:hover .card-svg {
+    transform: scale(1.05) rotate(1deg);
+}
+
+/* Card description text */
+.card-desc {
+    color: rgba(255,255,255,0.85);
+    font-size: 0.75rem;
+    line-height: 1.6;
+    padding: 0.9rem 0.85rem;
+    text-align: center;
+    text-wrap: wrap;
+    transition: color 0.2s ease-in-out;
+}
+article .card-border:hover .card-desc {
+    color: white;
+}
+
+/* Bottom bar with icons */
+.card-bottombar {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 0.75rem 0.7rem;
+}
+
+/* ── CTA BUTTON ── */
+.btn-portfolio {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.55rem;
+    background: var(--divs-dark);
+    color: #ffffff;
+    font-size: 0.95rem;
+    font-weight: 600;
+    padding: 0.75rem 2.2rem;
+    border-radius: 2rem;
+    width: 300px;
+    transition: all 0.2s, transform 0.15s;
+    cursor: pointer;
+}
+
+article:first-child .btn-portfolio:hover {
+    background: var(--yellow-a);
+    border-radius: 0.75rem;
+}
+article:last-child .btn-portfolio:hover {
+    background: var(--red-a);
+    border-radius: 0.75rem;
+}
+
+.btn-portfolio svg {
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+}
+
+/* ── FOOTER ── */
+footer {
+    width: 100%;
+    text-align: center;
+    padding-bottom: 0.3rem;
+    color: var(--subtext);
+    font-size: 0.75rem;
+    font-style: italic;
+    font-weight: normal;
+}

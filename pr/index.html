@@ -1,0 +1,940 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" data-lang="en" data-portfolio="programming">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="index, follow" />
+
+    <title>Developer | Charles Nuno</title>
+    <meta name="description" content="Good with code. Developer portfolio of Charles Nuno, front-end developer and UI/UX designer based in Luanda, Angola." />
+    <meta name="author" content="Charles Nuno" />
+    <meta name="keywords" content="developer, web developer, front-end, back-end, UI/UX, HTML, CSS, JavaScript, PHP, Luanda, Angola" />
+
+    <!-- TODO: update once hosting/domain is decided -->
+    <link rel="canonical" href="https://YOUR-DOMAIN-HERE.com/pr/" />
+
+    <meta property="og:title" content="Developer | Charles Nuno" />
+    <meta property="og:description" content="Good with code. Developer portfolio of Charles Nuno, front-end developer and UI/UX designer based in Luanda, Angola." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://YOUR-DOMAIN-HERE.com/pr/" />
+    <meta property="og:image" content="https://YOUR-DOMAIN-HERE.com/img/icons/programming-icon.svg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Charles Nuno developer portfolio" />
+    <meta property="og:site_name" content="Charles Nuno" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:locale:alternate" content="pt_AO" />
+    <meta property="og:locale:alternate" content="fr_FR" />
+    <meta property="og:locale:alternate" content="zh_CN" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Developer | Charles Nuno" />
+    <meta name="twitter:description" content="Good with code. Developer portfolio of Charles Nuno, front-end developer and UI/UX designer based in Luanda, Angola." />
+    <meta name="twitter:image" content="https://YOUR-DOMAIN-HERE.com/img/og-development.png" />
+
+    <link rel="shortcut icon" href="../img/icons/fav-icon.png" type="image/x-icon">
+    <meta name="theme-color" content="#f7f8fa" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#0f172a" media="(prefers-color-scheme: dark)">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../css/portfolio.css" />
+    <link rel="stylesheet" media="screen and (min-width: 768px)" href="../css/portfolio_desktop.css" />
+</head>
+<body data-active-section="about-me">
+
+    <!-- ═══════════════════════════════════════════
+         NAVBAR
+    ═══════════════════════════════════════════ -->
+    <header class="navbar" role="banner">
+
+        <a href="./" class="navbar__logo" aria-label="Back to top of the Developer portfolio">
+            <span class="navbar__logo-icon icon-programming" aria-hidden="true"></span>
+            <h1 class="navbar__logo-name" data-i18n="nav.title">Developer</h1>
+        </a>
+
+        <!-- Controls (desktop) -->
+        <div class="navbar__controls" role="toolbar" aria-label="Page controls">
+
+            <div class="navbar__lang-wrapper">
+                <button type="button"
+                        class="navbar__btn navbar__btn--lang"
+                        id="btn-lang-desktop"
+                        aria-haspopup="listbox"
+                        aria-expanded="false"
+                        aria-label="Select language">
+                    <span class="btn-label" data-i18n="nav.lang">English</span>
+                    <span aria-hidden="true">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                             stroke="currentColor" stroke-width="2.5"
+                             stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="6 9 12 15 18 9"/>
+                        </svg>
+                    </span>
+                </button>
+                <ul class="lang-dropdown" role="listbox" aria-label="Available languages" hidden>
+                    <li role="option" data-lang="en" aria-selected="true">English</li>
+                    <li role="option" data-lang="pt" aria-selected="false">Português</li>
+                    <li role="option" data-lang="fr" aria-selected="false">Français</li>
+                    <li role="option" data-lang="zh" aria-selected="false">中文</li>
+                </ul>
+            </div>
+
+            <button type="button"
+                    class="navbar__btn navbar__btn--theme"
+                    id="btn-theme-desktop"
+                    aria-label="Toggle light/dark theme"
+                    aria-pressed="false">
+                <span class="btn-label" data-i18n="nav.theme">Light</span>
+                <span class="icon-light" aria-hidden="true">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                         stroke="currentColor" stroke-width="2"
+                         stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"/>
+                        <line x1="12" y1="1"  x2="12" y2="3"/>
+                        <line x1="12" y1="21" x2="12" y2="23"/>
+                        <line x1="4.22" y1="4.22"  x2="5.64" y2="5.64"/>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+                        <line x1="1" y1="12" x2="3" y2="12"/>
+                        <line x1="21" y1="12" x2="23" y2="12"/>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+                    </svg>
+                </span>
+                <span class="icon-dark" aria-hidden="true" hidden>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                         stroke="currentColor" stroke-width="2"
+                         stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+                    </svg>
+                </span>
+            </button>
+
+            <a href="../index.html"
+               class="navbar__btn navbar__btn--exit"
+               aria-label="Exit to the homepage">
+                <span class="btn-label" data-i18n="nav.exit">Exit</span>
+                <span aria-hidden="true">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                         stroke="currentColor" stroke-width="2"
+                         stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/>
+                        <polyline points="16 17 21 12 16 7"/>
+                        <line x1="21" y1="12" x2="9" y2="12"/>
+                    </svg>
+                </span>
+            </a>
+
+        </div>
+
+    </header>
+
+    <!-- Mobile bar: hamburger (left) | language (center) | exit (right) -->
+    <div class="navbar__mobile" role="toolbar" aria-label="Mobile controls">
+
+        <button type="button" class="navbar__btn navbar__btn--menu"
+                id="btn-menu"
+                aria-label="Open menu" aria-expanded="false" aria-controls="drawer">
+            <svg class="icon-menu" width="22" height="22" viewBox="0 0 24 24" fill="none"
+                 stroke="currentColor" stroke-width="2"
+                 stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <line x1="3" y1="6"  x2="21" y2="6"/>
+                <line x1="3" y1="12" x2="21" y2="12"/>
+                <line x1="3" y1="18" x2="21" y2="18"/>
+            </svg>
+            <svg class="icon-close" width="22" height="22" viewBox="0 0 24 24" fill="none"
+                 stroke="currentColor" stroke-width="2"
+                 stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <line x1="18" y1="6"  x2="6"  y2="18"/>
+                <line x1="6"  y1="6"  x2="18" y2="18"/>
+            </svg>
+        </button>
+
+        <div class="navbar__lang-wrapper">
+            <button type="button" class="navbar__btn navbar__btn--lang"
+                    id="btn-lang-mobile"
+                    aria-haspopup="listbox" aria-expanded="false"
+                    aria-label="Select language">
+                <span class="btn-label" data-i18n="nav.lang_short">EN</span>
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none"
+                     stroke="currentColor" stroke-width="2.5"
+                     stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <polyline points="6 9 12 15 18 9"/>
+                </svg>
+            </button>
+            <ul class="lang-dropdown" role="listbox" hidden>
+                <li role="option" data-lang="en" aria-selected="true">English</li>
+                <li role="option" data-lang="pt" aria-selected="false">Português</li>
+                <li role="option" data-lang="fr" aria-selected="false">Français</li>
+                <li role="option" data-lang="zh" aria-selected="false">中文</li>
+            </ul>
+        </div>
+
+        <a href="../index.html" class="navbar__btn navbar__btn--exit" aria-label="Exit">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                 stroke="currentColor" stroke-width="2"
+                 stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/>
+                <polyline points="16 17 21 12 16 7"/>
+                <line x1="21" y1="12" x2="9" y2="12"/>
+            </svg>
+        </a>
+
+    </div>
+
+    <!-- ═══════════════════════════════════════════
+         DRAWER MOBILE
+    ═══════════════════════════════════════════ -->
+    <aside class="drawer" id="drawer" role="dialog" aria-modal="true" aria-label="Menu">
+
+        <div class="drawer__top" >
+            <p class="drawer__tagline">
+                <span id="drawer-typewriter"></span>
+                <span class="cursor" aria-hidden="true">|</span>
+            </p>
+            <button type="button" class="navbar__btn navbar__btn--theme"
+                    id="btn-theme-mobile"
+                    aria-label="Toggle theme" aria-pressed="false">
+                <span class="btn-label" data-i18n="nav.theme">Light</span>
+                <span class="icon-light" aria-hidden="true">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                         stroke="currentColor" stroke-width="2"
+                         stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"/>
+                        <line x1="12" y1="1"  x2="12" y2="3"/>
+                        <line x1="12" y1="21" x2="12" y2="23"/>
+                        <line x1="4.22" y1="4.22"  x2="5.64" y2="5.64"/>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+                        <line x1="1"    y1="12"     x2="3"     y2="12"/>
+                        <line x1="21"   y1="12"     x2="23"    y2="12"/>
+                        <line x1="4.22" y1="19.78"  x2="5.64"  y2="18.36"/>
+                        <line x1="18.36" y1="5.64"  x2="19.78" y2="4.22"/>
+                    </svg>
+                </span>
+                <span class="icon-dark" aria-hidden="true" hidden>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                         stroke="currentColor" stroke-width="2"
+                         stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+                    </svg>
+                </span>
+            </button>
+        </div>
+
+        <hr class="drawer__divider" />
+
+        <nav class="drawer__nav" aria-label="Sections">
+            <h2 class="drawer__nav-title" data-i18n="sidebar.sections">Sections</h2>
+            <ul class="drawer__sections">
+
+                <li class="drawer__section-item is-active" data-section="about-me">
+                    <button type="button" class="drawer__section-btn"
+                            aria-expanded="true" aria-controls="drawer-sub-about-me">
+                        <span data-i18n="sections.about">About Me</span>
+                        <svg class="chevron" width="16" height="16" viewBox="0 0 24 24"
+                             fill="none" stroke="currentColor" stroke-width="2.5"
+                             stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <polyline points="6 9 12 15 18 9"/>
+                        </svg>
+                    </button>
+                    <ul class="drawer__sub-links" id="drawer-sub-about-me" role="list">
+                        <li><a href="#who-am-i"  data-i18n="about.who">Who Am I?</a></li>
+                        <li><a href="#what-i-do" data-i18n="about.what">What Do I Do?</a></li>
+                        <li><a href="#why-i-do"  data-i18n="about.why">Why Do I Do It?</a></li>
+                    </ul>
+                </li>
+
+                <li class="drawer__section-item" data-section="projects">
+                    <button type="button" class="drawer__section-btn"
+                            aria-expanded="false" aria-controls="drawer-sub-projects">
+                        <span data-i18n="sections.projects">Projects</span>
+                        <svg class="chevron" width="16" height="16" viewBox="0 0 24 24"
+                             fill="none" stroke="currentColor" stroke-width="2.5"
+                             stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <polyline points="6 9 12 15 18 9"/>
+                        </svg>
+                    </button>
+                    <ul class="drawer__sub-links" id="drawer-sub-projects" role="list" hidden>
+                        <li><a href="#front-end" data-i18n="projects.fe">Front-End</a></li>
+                        <li><a href="#back-end"  data-i18n="projects.be">Back-End</a></li>
+                    </ul>
+                </li>
+
+                <li class="drawer__section-item" data-section="contacts">
+                    <button type="button" class="drawer__section-btn"
+                            aria-expanded="false" aria-controls="drawer-sub-contacts">
+                        <span data-i18n="sections.contacts">Contacts</span>
+                        <svg class="chevron" width="16" height="16" viewBox="0 0 24 24"
+                             fill="none" stroke="currentColor" stroke-width="2.5"
+                             stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <polyline points="6 9 12 15 18 9"/>
+                        </svg>
+                    </button>
+                    <ul class="drawer__sub-links" id="drawer-sub-contacts" role="list" hidden>
+                        <li><a href="#email"  data-i18n="contacts.email">Email</a></li>
+                        <li><a href="#phone"  data-i18n="contacts.phone">Phone</a></li>
+                        <li><a href="#social" data-i18n="contacts.social">Social Media</a></li>
+                    </ul>
+                </li>
+
+            </ul>
+        </nav>
+
+        <!-- Decorative symbol: thinker + Angola map outline (colored via CSS) -->
+        <div class="portfolio-symbol drawer__deco" aria-hidden="true">
+            <span class="portfolio-symbol__map"></span>
+            <span class="portfolio-symbol__mask"></span>
+        </div>
+
+    </aside>
+
+    <div class="drawer-overlay" id="drawer-overlay" aria-hidden="true"></div>
+
+    <!-- ═══════════════════════════════════════════
+         MAIN LAYOUT (3 columns on desktop)
+    ═══════════════════════════════════════════ -->
+    <div class="layout">
+
+        <!-- ── LEFT COLUMN: sections only, no sub-links (desktop) ── -->
+        <aside class="sidebar sidebar--left" aria-label="Navigation between sections">
+            <div class="sidebar__inner">
+                <h2 class="sidebar__title" data-i18n="sidebar.sections">Sections</h2>
+                <nav aria-label="Portfolio sections">
+                    <ul class="sidebar__sections">
+
+                        <li class="sidebar__section-item" data-section="about-me">
+                            <button type="button" class="sidebar__section-btn is-active" data-section="about-me">
+                                <span data-i18n="sections.about">About Me</span>
+                            </button>
+                        </li>
+
+                        <li class="sidebar__section-item" data-section="projects">
+                            <button type="button" class="sidebar__section-btn" data-section="projects">
+                                <span data-i18n="sections.projects">Projects</span>
+                            </button>
+                        </li>
+
+                        <li class="sidebar__section-item" data-section="contacts">
+                            <button type="button" class="sidebar__section-btn" data-section="contacts">
+                                <span data-i18n="sections.contacts">Contacts</span>
+                            </button>
+                        </li>
+
+                    </ul>
+                </nav>
+            </div>
+            <p class="sidebar__tagline">
+                <span id="sidebar-typewriter"></span>
+                <span class="cursor" aria-hidden="true">|</span>
+            </p>
+        </aside>
+
+        <!-- ── CENTER COLUMN: scrollable content ── -->
+        <main class="content" id="main-content" role="main">
+
+            <!-- MODAL / LIGHTBOX — generic, reused by Archives and Projects -->
+            <div class="lightbox" id="lightbox" role="dialog"
+                 aria-modal="true" aria-label="Expanded item" hidden>
+                <div class="lightbox__backdrop"></div>
+                <div class="lightbox__box">
+                    <button class="lightbox__close" aria-label="Close">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+                             stroke="currentColor" stroke-width="2.5"
+                             stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="18" y1="6" x2="6" y2="18"/>
+                            <line x1="6" y1="6" x2="18" y2="18"/>
+                        </svg>
+                    </button>
+                    <img class="lightbox__img" src="" alt="" />
+                    <div class="lightbox__info">
+                        <div class="lightbox__meta">
+                            <!-- Archives mode: filled with a clickable Google Maps link -->
+                            <a class="lightbox__local" href="#" target="_blank" rel="noopener noreferrer" hidden></a>
+                            <!-- Work mode: filled with plain channel/company name, no link -->
+                            <span class="lightbox__contexto" hidden></span>
+                            <span class="lightbox__sep" aria-hidden="true">·</span>
+                            <span class="lightbox__ano"></span>
+                        </div>
+                        <p class="lightbox__evento"></p>
+                        <p class="lightbox__descricao"></p>
+                        <!-- External project link (GitHub Pages / GitHub repo) -->
+                        <a class="lightbox__link" href="#" target="_blank"
+                           rel="noopener noreferrer" hidden></a>
+                        <div class="lightbox__skills" hidden>
+                            <p class="lightbox__skills-title">Skills &amp; Tools</p>
+                            <div class="lightbox__skills-pills"></div>
+                        </div>
+                        <div class="lightbox__highlights" hidden>
+                            <p class="lightbox__highlights-title">Highlights</p>
+                            <div class="lightbox__highlights-pills"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ·· SECTION: ABOUT ME ·· -->
+            <section class="section" id="section-about-me"
+                     data-section="about-me" aria-labelledby="title-about-me">
+
+                <h2 class="section__title" id="title-about-me" data-i18n="sections.about">About Me</h2>
+
+                <div class="toc-mobile" id="toc-mobile-about-me" aria-label="On this page">
+                    <h3 class="toc__title">
+                        <span aria-hidden="true">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                 stroke="currentColor" stroke-width="2"
+                                 stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10"/>
+                                <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/>
+                            </svg>
+                        </span>
+                        <span data-i18n="toc.title">On this page</span>
+                    </h3>
+                    <ul class="toc__links" id="toc-mobile-links-about-me" role="list"></ul>
+                </div>
+
+                <!-- Who Am I -->
+                <article class="article" id="who-am-i" aria-labelledby="h-who-am-i">
+                    <h3 class="article__title" id="h-who-am-i" data-i18n="about.who">WHO AM I?</h3>
+
+                    <!-- "(Hello World)" is FIXED — never translated -->
+                    <p class="article__text">
+                        <span>(Hello World)</span>
+                        <span data-i18n="about.who_intro">Greetings! My name is Charles Nuno and, besides being Angolan, I'm a communicator by training, a creative by nature, a student by passion, and a polyglot by dedication. The images below capture some of the standout moments in my life as a developer.</span>
+                    </p>
+
+                    <!-- Single "Archives" tab — visually hidden (same pattern as co/) -->
+                    <div class="photo-tabs tabs-hidden" role="tablist" aria-label="Archives">
+                        <button class="photo-tab is-active" role="tab"
+                                aria-selected="true" data-filter="archives">Archives</button>
+                    </div>
+
+                    <div class="photo-grid" role="list" aria-label="Archives gallery">
+
+                        <!-- All captions below are FIXED — always in English -->
+                        <button type="button" class="photo-grid__item" role="listitem"
+                                data-tab="archives"
+                                data-local="Academia BAI"
+                                data-maps="https://maps.google.com/?q=Academia+BAI+Luanda"
+                                data-ano="2024"
+                                data-evento="Log In event"
+                                data-descricao="This was the second event I attended, Log In, as part of my journey to becoming a programmer. It inspired me even further about the IT field, which led me to take my first web development course the following month."
+                                aria-label="Academia BAI, 2024">
+                            <img src="../img/isaf.jpg" alt="Charles at the Log In event, Academia BAI" loading="lazy"/>
+                        </button>
+
+                        <button type="button" class="photo-grid__item" role="listitem"
+                                data-tab="archives"
+                                data-local="Centro de Conferências de Talatona"
+                                data-maps="https://maps.google.com/?q=Centro+de+Conferencias+de+Talatona+Luanda"
+                                data-ano="2024"
+                                data-evento="Unitel Startup Summit"
+                                data-descricao="It was after Unitel Startup Summit that I decided my degree alone wouldn't be enough for today's globalized world, and that, besides being a polyglot, I also needed to know how to communicate with computers. Even though I had studied Python during quarantine (yes, with Gustavo Guanabara), I consider this event the genesis of my programming journey."
+                                aria-label="Centro de Conferências de Talatona, 2024">
+                            <img src="../img/startup-summit.jpg" alt="Charles at Unitel Startup Summit" loading="lazy" />
+                        </button>
+
+                        <button type="button" class="photo-grid__item" role="listitem"
+                                data-tab="archives"
+                                data-local="Universidade Óscar Ribas"
+                                data-maps="https://maps.google.com/?q=Universidade+Oscar+Ribas+Luanda"
+                                data-ano="2025"
+                                data-evento="Professional 5.0 seminar"
+                                data-descricao="This event, a seminar on Professional 5.0 and entrepreneurship, helped me understand what the job market expects from recent graduates. It's not so much about experience, it's more about prior knowledge of the software used in the field. In this talk, I basically learned the concept of SaaS and what it means to be a 5.0 professional."
+                                aria-label="Universidade Óscar Ribas, 2025">
+                            <img src="../img/oscar-ribas.jpg" alt="Charles at the Professional 5.0 seminar, Universidade Óscar Ribas" loading="lazy" />
+                        </button>
+
+                        <button type="button" class="photo-grid__item" role="listitem"
+                                data-tab="archives"
+                                data-local="Hotel Epic Sana"
+                                data-maps="https://maps.google.com/?q=hotel+epic+sana+luanda"
+                                data-ano="2024"
+                                data-evento="Agriculture and technology conference"
+                                data-descricao="This photo captures the era when I showed up to every conference, seminar, or event going. It also marks the first time I stayed at the Epic Sana Hotel, and, as Angola's first president once said, “We shall return.”"
+                                aria-label="Hotel Epic Sana, 2024">
+                            <img src="../img/epic.jpg" alt="Charles watching a conference about agriculture and technology" loading="lazy" />
+                        </button>
+
+                        <button type="button" class="photo-grid__item" role="listitem"
+                                data-tab="archives"
+                                data-local="Universidade Católica de Angola"
+                                data-maps="https://maps.google.com/?q=Universidade+Catolica+de+Angola+Luanda"
+                                data-ano="2025"
+                                data-evento="Programming competition"
+                                data-descricao="This is the classic 'group photo' (the one taken by an event's members, participants, and organizers right after it wraps up). This time, the event was Coding Angola, a programming competition where I entered the front-end category, but didn't win."
+                                aria-label="Universidade Católica de Angola, 2025">
+                            <img src="../img/coding.jpg" alt="Charles with the organization and competitors of Coding Angola" loading="lazy" />
+                        </button>
+
+                    </div>
+
+                    <button type="button" class="photo-more-btn" aria-expanded="false" hidden>
+                        <span class="photo-more-btn__label">See more</span>
+                        <svg class="photo-more-btn__icon" width="16" height="16" viewBox="0 0 24 24"
+                             fill="none" stroke="currentColor" stroke-width="2.5"
+                             stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <polyline points="6 9 12 15 18 9"/>
+                        </svg>
+                    </button>
+
+                </article>
+
+                <!-- What Do I Do -->
+                <article class="article" id="what-i-do" aria-labelledby="h-what-i-do">
+                    <h3 class="article__title" id="h-what-i-do" data-i18n="about.what">WHAT DO I DO?</h3>
+
+                    <p class="article__text" data-i18n="about.what_intro">Descartes once said "I think, therefore I am". Today it feels more like "I appear, therefore I am". I build digital solutions: if a problem can be solved with code, I consider it solved.</p>
+
+                    <ul class="skills-list" role="list" aria-label="Core skills">
+                        <li class="skills-list__item" data-i18n="about.what_skill_1">Product Pitching</li>
+                        <li class="skills-list__item" data-i18n="about.what_skill_2">Web Programming</li>
+                        <li class="skills-list__item" data-i18n="about.what_skill_3">Responsive Design</li>
+                        <li class="skills-list__item" data-i18n="about.what_skill_4">Problem Solving</li>
+                    </ul>
+                </article>
+
+                <!-- Why Do I Do It -->
+                <article class="article" id="why-i-do" aria-labelledby="h-why-i-do">
+                    <h3 class="article__title" id="h-why-i-do" data-i18n="about.why">WHY DO I DO IT?</h3>
+
+                    <p class="article__text" data-i18n="about.why_intro">On November 18, 2024, when I started my first web development course, I already had several ideas (I still do), but the main one was building a website for my mother's company. I looked at the global picture and realized that in developed countries, people my age already knew something about programming, while I, in an underdeveloped country, knew nothing. Fortunately, I don't study with only the Angolan context in mind. I have a talent for creating, and I see that with programming I can build something that might echo across the world, or at least help my own people if it doesn't go that far. And about that talent, I don't think it's a coincidence that my name starts with creativity.</p>
+
+                    <ul class="acrostic" role="list" aria-label="CHARLES acronym">
+                        <li class="acrostic__item">
+                            <span class="acrostic__letter" aria-hidden="true">C</span>
+                            <span class="acrostic__dash" aria-hidden="true">—</span>
+                            <span class="acrostic__skill" data-i18n="about.acrostic_c">Creativity</span>
+                        </li>
+                        <li class="acrostic__item">
+                            <span class="acrostic__letter" aria-hidden="true">H</span>
+                            <span class="acrostic__dash" aria-hidden="true">—</span>
+                            <span class="acrostic__skill" data-i18n="about.acrostic_h">Humility</span>
+                        </li>
+                        <li class="acrostic__item">
+                            <span class="acrostic__letter" aria-hidden="true">A</span>
+                            <span class="acrostic__dash" aria-hidden="true">—</span>
+                            <span class="acrostic__skill" data-i18n="about.acrostic_a">Adaptability</span>
+                        </li>
+                        <li class="acrostic__item">
+                            <span class="acrostic__letter" aria-hidden="true">R</span>
+                            <span class="acrostic__dash" aria-hidden="true">—</span>
+                            <span class="acrostic__skill" data-i18n="about.acrostic_r">Resilience</span>
+                        </li>
+                        <li class="acrostic__item">
+                            <span class="acrostic__letter" aria-hidden="true">L</span>
+                            <span class="acrostic__dash" aria-hidden="true">—</span>
+                            <span class="acrostic__skill" data-i18n="about.acrostic_l">Leadership</span>
+                        </li>
+                        <li class="acrostic__item">
+                            <span class="acrostic__letter" aria-hidden="true">E</span>
+                            <span class="acrostic__dash" aria-hidden="true">—</span>
+                            <span class="acrostic__skill" data-i18n="about.acrostic_e">Empathy</span>
+                        </li>
+                        <li class="acrostic__item">
+                            <span class="acrostic__letter" aria-hidden="true">S</span>
+                            <span class="acrostic__dash" aria-hidden="true">—</span>
+                            <span class="acrostic__skill" data-i18n="about.acrostic_s">Sociability</span>
+                        </li>
+                    </ul>
+
+                    <!-- Quotes are FIXED — always in English -->
+                    <div class="quotes-carousel" id="quotes-carousel" aria-label="Inspiration quotes">
+                        <div class="quotes-track" id="quotes-track">
+
+                            <figure class="quote-item" data-quote>
+                                <blockquote class="quote-item__text">
+                                    Be less curious about people and more curious about ideas.
+                                </blockquote>
+                                <figcaption class="quote-item__author">
+                                    — Marie Curie
+                                </figcaption>
+                            </figure>
+
+                            <figure class="quote-item" data-quote>
+                                <blockquote class="quote-item__text">
+                                    I have not failed. I've just found other ways that don't work.
+                                </blockquote>
+                                <figcaption class="quote-item__author">
+                                    — Thomas Edison
+                                </figcaption>
+                            </figure>
+
+                            <figure class="quote-item" data-quote>
+                                <blockquote class="quote-item__text">
+                                    Great minds discuss ideas, average minds discuss events, small minds discuss people.
+                                </blockquote>
+                                <figcaption class="quote-item__author">
+                                    — Unknown
+                                </figcaption>
+                            </figure>
+
+                            <figure class="quote-item" data-quote>
+                                <blockquote class="quote-item__text">
+                                    We are what we repeatedly do. Excellence, then, is not an act, but a habit.
+                                </blockquote>
+                                <figcaption class="quote-item__author">
+                                    — Aristotle
+                                </figcaption>
+                            </figure>
+
+                            <figure class="quote-item" data-quote>
+                                <blockquote class="quote-item__text">
+                                    Private victories precede public victories. Keeping promises to ourselves comes before keeping promises to others. It's pointless to put personality above character.
+                                </blockquote>
+                                <figcaption class="quote-item__author">
+                                    — Stephen R. Covey
+                                </figcaption>
+                            </figure>
+
+                        </div>
+                    </div>
+
+                    <p class="article__text">
+                        <span data-i18n="about.closing_pre">Now that you know a bit more about me, maybe it's time to check out my</span>
+                        <button type="button" class="inline-link"
+                                data-next-section="projects"
+                                data-i18n-next="sections.projects">projects</button><span data-i18n="about.closing_post">.</span>
+                    </p>
+
+                </article>
+
+            </section>
+
+            <!-- ·· SECTION: PROJECTS ·· -->
+            <section class="section" id="section-projects"
+                     data-section="projects" aria-labelledby="title-projects" hidden>
+
+                <h2 class="section__title" id="title-projects" data-i18n="sections.projects">Projects</h2>
+
+                <div class="toc-mobile" id="toc-mobile-projects" aria-label="On this page">
+                    <h3 class="toc__title">
+                        <span aria-hidden="true">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                 stroke="currentColor" stroke-width="2"
+                                 stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10"/>
+                                <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/>
+                            </svg>
+                        </span>
+                        <span data-i18n="toc.title">On this page</span>
+                    </h3>
+                    <ul class="toc__links" id="toc-mobile-links-projects" role="list"></ul>
+                </div>
+
+                <!-- Front-End -->
+                <article class="article" id="front-end" aria-labelledby="h-fe">
+
+                    <h3 class="article__title" id="h-fe" data-i18n="projects.fe">Front-End</h3>
+
+                    <p class="article__text" data-i18n="projects.fe_intro">I classify as Front-End the projects focused on what the user sees and directly interacts with: interface, layout, responsiveness, and visual experience. It was the area I found most natural to grasp early on, likely thanks to my background in communication. The projects gathered here show how I use code to turn visual concepts into functional interfaces.</p>
+
+                    <div class="photo-tabs" role="tablist" aria-label="Filter by project">
+                        <button class="photo-tab is-active" role="tab"
+                                aria-selected="true" data-filter="charles-nuno">Charles Nuno</button>
+                        <button class="photo-tab" role="tab"
+                                aria-selected="false" data-filter="edukwanzas">EduKwanzas</button>
+                        <button class="photo-tab" role="tab"
+                                aria-selected="false" data-filter="candgest-viagens">Candgest Viagens</button>
+                        <button class="photo-tab" role="tab"
+                                aria-selected="false" data-filter="portfolio-antigo">Old Portfolio</button>
+                    </div>
+
+                    <div class="photo-grid" role="list" aria-label="Front-end projects">
+
+                        <!-- Project screenshots: drop files into ../img/pr/ with these names -->
+                        <button class="photo-grid__item" role="listitem"
+                                data-tab="charles-nuno" data-type="image"
+                                data-contexto="Front-End" data-ano="2026"
+                                data-subtitulo="Personal Developer Portfolio, Front to Back"
+                                data-desc-key="projects.p1_desc"
+                                data-skills="HTML5,CSS3,JavaScript,Figma,AI-Assisted Development,Web Design"
+                                data-highlights="Two-Portfolio Card System, Figma-First Design Process, Responsive Across Mobile, Tablet & Desktop, Scalable Architecture"
+                                aria-label="Charles Nuno Portfolio, 2026">
+                            <img src="../img/pr/portfolio-atual.png" alt="Screenshot of the Charles Nuno portfolio gateway page" loading="lazy" />
+                        </button>
+
+                        <button class="photo-grid__item" role="listitem"
+                                data-tab="edukwanzas" data-type="image"
+                                data-contexto="Front-End" data-ano="2026"
+                                data-subtitulo="Loan Simulator Landing Page for a Fintech Startup"
+                                data-desc-key="projects.p2_desc"
+                                data-skills="HTML5,CSS3,Tailwind CSS,JavaScript,Figma,UI/UX Design"
+                                data-highlights="Interactive Loan Simulator,Mobile-First Responsive Design,Trust-Driven Visual Identity,Custom Figma Illustrations"
+                                data-link="https://chano-dev.github.io/edukwanzas/"
+                                aria-label="EduKwanzas landing page, 2026">
+                            <img src="../img/pr/edukwanzas.png" alt="Screenshot of the EduKwanzas landing page" loading="lazy" />
+                        </button>
+
+                        <button class="photo-grid__item" role="listitem"
+                                data-tab="candgest-viagens" data-type="image"
+                                data-contexto="Front-End" data-ano="2026"
+                                data-subtitulo="Travel Agency Landing Page, Built with AI"
+                                data-desc-key="projects.p3_desc"
+                                data-skills="HTML5,CSS3,JavaScript,AI-Assisted Development"
+                                data-highlights="Whatsapp-Integrated Contact Form, AI-Assisted Rpaid Prototyping, Institutional Landing Page, Sutble Scroll Animations"
+                                data-link="https://chano-dev.github.io/candgest-viagens/"
+                                aria-label="Candgest Viagens landing page, 2026">
+                            <img src="../img/pr/candgest-viagens.png" alt="Screenshot of the Candgest Viagens landing page" loading="lazy" />
+                        </button>
+
+                        <button class="photo-grid__item" role="listitem"
+                                data-tab="portfolio-antigo" data-type="image"
+                                data-contexto="Front-End" data-ano="2026"
+                                data-subtitulo="A Portfolio Built Under Pressure, at 42 Luanda"
+                                data-desc-key="projects.p4_desc"
+                                data-skills="HTML5,CSS3,Team Collaboration,Time Management"
+                                data-highlights="Olympus-Themed Concept, Hackathon-Style Challenge, Two-Person Collaboration, CV-Style"
+                                data-link="https://chano-dev.github.io/web-practice/"
+                                aria-label="Old portfolio from the 42 Luanda Rush, 2026">
+                            <img src="../img/pr/portfolio-antigo.png" alt="Screenshot of the Olympus-themed portfolio built at 42 Luanda" loading="lazy" />
+                        </button>
+
+                    </div>
+
+                    <button class="photo-more-btn" aria-expanded="false" hidden>
+                        <span class="photo-more-btn__label">See more</span>
+                        <svg class="photo-more-btn__icon" width="16" height="16"
+                             viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                             stroke-width="2.5" stroke-linecap="round"
+                             stroke-linejoin="round" aria-hidden="true">
+                            <polyline points="6 9 12 15 18 9"/>
+                        </svg>
+                    </button>
+
+                    <div class="article-skills">
+                        <h4 class="article-skills__title" data-i18n="skills.title">Core Skills</h4>
+                        <ul class="article-skills__list" role="list">
+                            <li class="article-skills__item" data-i18n="skills.fe.1">HTML5</li>
+                            <li class="article-skills__item" data-i18n="skills.fe.2">CSS3</li>
+                            <li class="article-skills__item" data-i18n="skills.fe.3">JavaScript</li>
+                            <li class="article-skills__item" data-i18n="skills.fe.4">Tailwind CSS</li>
+                            <li class="article-skills__item" data-i18n="skills.fe.5">UI/UX Design</li>
+                            <li class="article-skills__item" data-i18n="skills.fe.6">AI-Assisted Development</li>
+                        </ul>
+                    </div>
+
+                </article>
+
+                <!-- Back-End -->
+                <article class="article" id="back-end" aria-labelledby="h-be">
+
+                    <h3 class="article__title" id="h-be" data-i18n="projects.be">Back-End</h3>
+
+                    <p class="article__text" data-i18n="projects.be_intro">I classify as Back-End the projects where logic, data, and what happens behind the interface carry more weight: databases, authentication, information processing. It's the area I'm currently deepening my knowledge in, and where I feel there's still more ground to cover and master.</p>
+
+                    <div class="photo-tabs" role="tablist" aria-label="Filter by project">
+                        <button class="photo-tab is-active" role="tab"
+                                aria-selected="true" data-filter="molley-office">Molley Office</button>
+                        <button class="photo-tab" role="tab"
+                                aria-selected="false" data-filter="youtube-downloader">YouTube Downloader</button>
+                    </div>
+
+                    <div class="photo-grid" role="list" aria-label="Back-end projects">
+
+                        <button class="photo-grid__item" role="listitem"
+                                data-tab="molley-office" data-type="image"
+                                data-contexto="Back-End" data-ano="2025"
+                                data-subtitulo="Custom Invoicing System for a Local Business"
+                                data-desc-key="projects.p5_desc"
+                                data-skills="HTML5,CSS3,JavaScript,PHP,MySQL,Bootstrap"
+                                data-link="https://github.com/chano-dev/molleyoffice"
+                                data-highlights="Automated Invoice Generation, Auto-Suggest Product Database, Client & Sales Management, Custom Login System"
+                                data-link-label-key="projects.open_github"
+                                aria-label="Molley Office management system, 2025">
+                            <img src="../img/pr/molley-office.png" alt="Screenshot of the Molley Office internal management system" loading="lazy" />
+                        </button>
+
+                        <button class="photo-grid__item" role="listitem"
+                                data-tab="youtube-downloader" data-type="image"
+                                data-contexto="Back-End" data-ano="2026"
+                                data-subtitulo="A Local App for Downloading YouTube Videos & Audio"
+                                data-desc-key="projects.p6_desc"
+                                data-skills="HTML5,CSS3,JavaScript"
+                                data-link="https://github.com/chano-dev/youtube-downloader"
+                                data-highlights="Audio & Video Download Modes, Multi-Quality Export, Browser Extension Version, Real-Time Download Progress, Dark/Light Theme"
+                                data-link-label-key="projects.open_github"
+                                aria-label="YouTube Downloader local app, 2026">
+                            <img src="../img/pr/youtube-downloader.png" alt="Screenshot of the YouTube Downloader application" loading="lazy" />
+                        </button>
+
+                    </div>
+
+                    <button class="photo-more-btn" aria-expanded="false" hidden>
+                        <span class="photo-more-btn__label">See more</span>
+                        <svg class="photo-more-btn__icon" width="16" height="16"
+                             viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                             stroke-width="2.5" stroke-linecap="round"
+                             stroke-linejoin="round" aria-hidden="true">
+                            <polyline points="6 9 12 15 18 9"/>
+                        </svg>
+                    </button>
+
+                    <div class="article-skills">
+                        <h4 class="article-skills__title" data-i18n="skills.title">Core Skills</h4>
+                        <ul class="article-skills__list" role="list">
+                            <li class="article-skills__item" data-i18n="skills.be.1">PHP</li>
+                            <li class="article-skills__item" data-i18n="skills.be.2">MySQL</li>
+                            <li class="article-skills__item" data-i18n="skills.be.3">JavaScript</li>
+                            <li class="article-skills__item" data-i18n="skills.be.4">Git</li>
+                        </ul>
+                    </div>
+
+                    <p class="article__text">
+                        <span data-i18n="projects.closing_pre">Now that you've seen what I build, maybe it's time we talked. You can reach me through my</span>
+                        <button type="button" class="inline-link"
+                                data-next-section="contacts"
+                                data-i18n-next="sections.contacts">contacts</button><span data-i18n="projects.closing_post">.</span>
+                    </p>
+
+                </article>
+
+            </section>
+
+            <!-- ·· SECTION: CONTACTS ·· -->
+            <section class="section" id="section-contacts"
+                      data-section="contacts" aria-labelledby="title-contacts" hidden>
+
+                <h2 class="section__title" id="title-contacts" data-i18n="sections.contacts">Contacts</h2>
+
+                <div class="toc-mobile" id="toc-mobile-contacts" aria-label="On this page">
+                    <h3 class="toc__title">
+                        <span aria-hidden="true">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                 stroke="currentColor" stroke-width="2"
+                                 stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10"/>
+                                <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/>
+                            </svg>
+                        </span>
+                        <span data-i18n="toc.title">On this page</span>
+                    </h3>
+                    <ul class="toc__links" id="toc-mobile-links-contacts" role="list"></ul>
+                </div>
+
+                <article class="article contact-item" id="email" aria-labelledby="h-email">
+                    <h3 class="article__title" id="h-email" data-i18n="contacts.email">Email</h3>
+                    <a href="mailto:chanodev2025@gmail.com" class="contact-item__link">chanodev2025@gmail.com</a>
+                    <a href="mailto:charlesnuno1@gmail.com" class="contact-item__link">charlesnuno1@gmail.com</a>
+                </article>
+
+                <article class="article contact-item" id="phone" aria-labelledby="h-phone">
+                    <h3 class="article__title" id="h-phone" data-i18n="contacts.phone">Phone</h3>
+                    <a href="tel:+244 949 734 873" class="contact-item__link">+244 949 734 873</a>
+                    <a href="tel:+244 951 311 939" class="contact-item__link">+244 951 311 939</a>
+                </article>
+
+                <article class="article contact-item" id="social" aria-labelledby="h-social">
+                    <h3 class="article__title" id="h-social" data-i18n="contacts.social">Social Media</h3>
+                    <ul class="social-links" role="list">
+                        <li>
+                            <a href="https://www.linkedin.com/in/charles-nuno/" class="social-links__item" target="_blank" rel="noopener noreferrer"
+                               aria-label="Charles Nuno's LinkedIn">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+                                    <rect x="2" y="9" width="4" height="12"/>
+                                    <circle cx="4" cy="4" r="2"/>
+                                </svg>
+                                <span>LinkedIn</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/chano-dev" class="social-links__item" target="_blank" rel="noopener noreferrer"
+                               aria-label="Charles Nuno's GitHub">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                    <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
+                                </svg>
+                                <span>GitHub</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.youtube.com/@charlesnuno" class="social-links__item" target="_blank" rel="noopener noreferrer"
+                               aria-label="Charles Nuno's YouTube">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                    <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/>
+                                    <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/>
+                                </svg>
+                                <span>YouTube</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.behance.net/chanodev" class="social-links__item" target="_blank" rel="noopener noreferrer"
+                               aria-label="Charles Nuno's Behance">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                    <path d="M22 7h-7V5h7v2zm1.726 10c-.442 1.297-2.029 3-5.101 3-3.074 0-5.564-1.729-5.564-5.675 0-3.91 2.325-5.92 5.466-5.92 3.082 0 4.964 1.782 5.375 4.426.078.506.109 1.188.095 2.14H15.97c.13 3.211 3.483 3.312 4.588 2.029h3.168zm-7.686-4h4.965c-.105-1.547-1.136-2.219-2.477-2.219-1.466 0-2.277.768-2.488 2.219zm-9.574 6.988H0V5.021h6.953c5.476.081 5.58 5.444 2.72 6.906 3.461 1.26 3.577 8.061-3.207 8.061zM3 11h3.584c2.508 0 2.906-3-.312-3H3v3zm3.391 3H3v3.016c4.49 0 4.101-3.016.391-3.016z"/>
+                                </svg>
+                                <span>Behance</span>
+                            </a>
+                        </li>
+                    </ul>
+                </article>
+
+            </section>
+
+            <!-- Floating nav button — mobile only, tied to the sub-nav's visibility -->
+            <button class="compass-btn" id="compass-btn"
+                    aria-label="Back to the on-page index" hidden>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+                     stroke="currentColor" stroke-width="2"
+                     stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <circle cx="12" cy="12" r="10"/>
+                    <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/>
+                </svg>
+            </button>
+
+        </main>
+
+        <!-- ── RIGHT COLUMN: on-page index (desktop) ── -->
+        <aside class="sidebar sidebar--right" aria-label="Current page index">
+            <div class="toc" id="toc-desktop">
+                <h3 class="toc__title">
+                    <span aria-hidden="true">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                             stroke="currentColor" stroke-width="2"
+                             stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"/>
+                            <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/>
+                        </svg>
+                    </span>
+                    <span data-i18n="toc.title">On this page</span>
+                </h3>
+                <ul class="toc__links" id="toc-desktop-links" role="list"></ul>
+            </div>
+
+            <div class="portfolio-symbol sidebar__deco" aria-hidden="true">
+                <span class="portfolio-symbol__map"></span>
+                <span class="portfolio-symbol__mask"></span>
+            </div>
+        </aside>
+
+    </div><!-- /.layout -->
+
+    <!-- ═══════════════════════════════════════════
+         SCRIPTS
+    ═══════════════════════════════════════════ -->
+    <!-- Section ids differ from Communication's defaults → TOC override hook (AGENTS.md §3) -->
+    <script>
+        window.CN_TOC_MAP = {
+            'about-me': [
+                { key: 'about.who',     href: '#who-am-i' },
+                { key: 'about.what',    href: '#what-i-do' },
+                { key: 'about.why',     href: '#why-i-do' }
+            ],
+            'projects': [
+                { key: 'projects.fe',   href: '#front-end' },
+                { key: 'projects.be',   href: '#back-end' }
+            ],
+            'contacts': [
+                { key: 'contacts.email',  href: '#email' },
+                { key: 'contacts.phone',  href: '#phone' },
+                { key: 'contacts.social', href: '#social' }
+            ]
+        };
+    </script>
+    <script src="../js/i18n-programming.js"></script>
+    <script src="../js/portfolio-app.js"></script>
+
+</body>
+</html>
