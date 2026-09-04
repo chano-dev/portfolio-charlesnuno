@@ -872,6 +872,9 @@ body.skeleton-active .layout {
     grid-template-columns: repeat(2, 1fr);
     gap: var(--space-sm);
 }
+.photo-grid__item-wrap {
+    display: contents;
+}
 .photo-grid__item {
     position: relative;
     aspect-ratio: 4 / 3;
