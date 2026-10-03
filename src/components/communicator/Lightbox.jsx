@@ -1,16 +1,13 @@
 import { useEffect } from 'react'
 
 export default function Lightbox({ item, onClose }) {
-  // Os hooks vêm SEMPRE antes de qualquer return condicional
   useEffect(() => {
     if (!item) return
-
     const onKeyDown = (e) => {
       if (e.key === 'Escape') onClose()
     }
     document.addEventListener('keydown', onKeyDown)
-    document.body.style.overflow = 'hidden' // bloqueia o scroll por trás
-
+    document.body.style.overflow = 'hidden'
     return () => {
       document.removeEventListener('keydown', onKeyDown)
       document.body.style.overflow = ''
@@ -19,10 +16,18 @@ export default function Lightbox({ item, onClose }) {
 
   if (!item) return null
 
+  const isVideo = item.type === 'video'
+  const isArchive = Boolean(item.maps)
   const skills = item.skills ?? []
 
+  const boxClass = [
+    'lightbox',
+    isVideo && 'lightbox--video',
+    !isVideo && !isArchive && 'lightbox--contain', // Work mostra a imagem inteira
+  ].filter(Boolean).join(' ')
+
   return (
-    <div className="lightbox" role="dialog" aria-modal="true" aria-label="Expanded item">
+    <div className={boxClass} role="dialog" aria-modal="true" aria-label="Expanded item">
       <div className="lightbox__backdrop" onClick={onClose}></div>
 
       <div className="lightbox__box">
@@ -34,16 +39,27 @@ export default function Lightbox({ item, onClose }) {
           </svg>
         </button>
 
-        <img className="lightbox__img" src={item.img} alt={item.alt} />
+        {isVideo ? (
+          <iframe
+            className="lightbox__video"
+            src={`https://www.youtube-nocookie.com/embed/${item.youtube}?autoplay=1`}
+            title={item.evento}
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowFullScreen
+          />
+        ) : (
+          <img className="lightbox__img" src={item.img} alt={item.alt} />
+        )}
 
         <div className="lightbox__info">
           <div className="lightbox__meta">
-            {item.maps && (
+            {isArchive ? (
               <a className="lightbox__local" href={item.maps} target="_blank" rel="noopener noreferrer">
                 {item.local}
               </a>
+            ) : (
+              <span className="lightbox__contexto">{item.contexto}</span>
             )}
-            {item.contexto && <span className="lightbox__contexto">{item.contexto}</span>}
             <span className="lightbox__sep" aria-hidden="true">·</span>
             <span className="lightbox__ano">{item.ano}</span>
           </div>
@@ -53,7 +69,7 @@ export default function Lightbox({ item, onClose }) {
 
           {item.link && (
             <a className="lightbox__link" href={item.link} target="_blank" rel="noopener noreferrer">
-              View project
+              {item.linkLabel ?? 'Open link'}
             </a>
           )}
 

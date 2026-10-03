@@ -5,6 +5,7 @@ import Navbar from '../components/communicator/Navbar'
 import SidebarLeft from '../components/communicator/SidebarLeft'
 import { SECTIONS } from '../data/communicatorSections'
 import Lightbox from '../components/communicator/Lightbox'
+import Work from '../components/communicator/Work'
 
 export default function Communicator() {
   const [activeSection, setActiveSection] = useState('about-me')
@@ -49,11 +50,15 @@ export default function Communicator() {
               hidden={activeSection !== s.id}
             >
               <h2 className="section__title">{s.label}</h2>
-              {s.id === 'about-me' ? (
-                <AboutMe onNavigate={setActiveSection} onSelect={setSelectedItem} />
-              ) : (
-                <p>Conteúdo de {s.label} entra na próxima fase.</p>
-              )}
+                {s.id === 'about-me' && (
+                  <AboutMe onNavigate={setActiveSection} onSelect={setSelectedItem} />
+                )}
+                {s.id === 'work' && (
+                  <Work onNavigate={setActiveSection} onSelect={setSelectedItem} />
+                )}
+                {s.id === 'contacts' && (
+                  <p>Conteúdo de {s.label} entra na próxima fase.</p>
+                )}
             </section>
           ))}
         </main>

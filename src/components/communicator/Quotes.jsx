@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from 'react'
 import { QUOTES } from '../../data/quotes'
+import useMediaQuery from '../../hooks/useMediaQuery'
 
 const INTERVAL = 5000
 
@@ -30,7 +31,7 @@ export default function Quotes() {
     return () => clearInterval(timer)
   }, [])
 
-  const isDesktop = window.matchMedia('(min-width: 768px)').matches
+const isDesktop = useMediaQuery('(min-width: 768px)')
   const transform = isDesktop
     ? `translateX(-${index * step}px)`
     : `translateX(-${index * 100}%)`
