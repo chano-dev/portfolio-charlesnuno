@@ -1,11 +1,15 @@
 import { useState, useEffect } from 'react'
 import '../styles/communicator.css'
+import AboutMe from '../components/communicator/AboutMe'
 import Navbar from '../components/communicator/Navbar'
 import SidebarLeft from '../components/communicator/SidebarLeft'
 import { SECTIONS } from '../data/communicatorSections'
+import Lightbox from '../components/communicator/Lightbox'
 
 export default function Communicator() {
   const [activeSection, setActiveSection] = useState('about-me')
+  const [selectedItem, setSelectedItem] = useState(null)
+  const closeLightbox = () => setSelectedItem(null)
 
   // O teu CSS depende de atributos no <html> e no <body>
   useEffect(() => {
@@ -35,6 +39,7 @@ export default function Communicator() {
         <SidebarLeft active={activeSection} onChange={setActiveSection} />
 
         <main className="content" id="main-content">
+          <Lightbox item={selectedItem} onClose={closeLightbox} />
           {SECTIONS.map((s) => (
             <section
               key={s.id}
@@ -44,7 +49,11 @@ export default function Communicator() {
               hidden={activeSection !== s.id}
             >
               <h2 className="section__title">{s.label}</h2>
-              <p>Conteúdo de {s.label} entra na próxima fase.</p>
+              {s.id === 'about-me' ? (
+                <AboutMe onNavigate={setActiveSection} onSelect={setSelectedItem} />
+              ) : (
+                <p>Conteúdo de {s.label} entra na próxima fase.</p>
+              )}
             </section>
           ))}
         </main>
