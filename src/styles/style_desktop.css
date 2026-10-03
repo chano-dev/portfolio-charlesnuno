@@ -1,7 +1,13 @@
-body {
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.home {
     background-color: var(--fundo);
     padding: 20px clamp(25px, 5vw, 60px) 0 clamp(25px, 5vw, 60px);
-}
 
 /* Tamanhos de Textos */
 header h1, header h3 {
@@ -65,9 +71,4 @@ footer {
   animation-delay: 0.4s;
 }
 
-@keyframes fadeUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
 }

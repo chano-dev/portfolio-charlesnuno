@@ -52,7 +52,16 @@
 
 html { scroll-behavior: smooth; }
 
-body {
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-4px); }
+}
+@keyframes blink {
+    0%, 50%, 100% { opacity: 1; }
+    25%, 75% { opacity: 0; }
+}
+
+.home {
     font-family: 'Inter', 'Segoe UI', sans-serif;
     background-color: var(--divs);
     min-height: 100vh;
@@ -60,14 +69,6 @@ body {
     flex-direction: column;
     padding: 40px 15px 0px 15px;
     gap: 1.5rem;
-}
-
-#root {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-    flex: 1;
-}
 
 /* ── HEADER ── */
 header {
@@ -139,11 +140,6 @@ main {
     animation: blink 0.8s infinite;
 }
 
-@keyframes blink {
-    0%, 50%, 100% { opacity: 1; }
-    25%, 75% { opacity: 0; }
-}
-
 .cards-grid {
     width: 100%;
     display: inline-flex;
@@ -181,10 +177,6 @@ article {
     border: 3px solid var(--border);
     transition: transform 0.15s;
     animation: float 4s ease-in-out infinite;
-}
-@keyframes float {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-4px); }
 }
 
 /* Inner card surface */
@@ -365,4 +357,6 @@ footer {
     font-size: 0.75rem;
     font-style: italic;
     font-weight: normal;
+}
+
 }

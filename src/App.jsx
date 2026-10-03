@@ -1,7 +1,7 @@
 import { Routes, Route } from 'react-router-dom'
 import Home from './pages/Home.jsx'
-import Communicator from './pages/Communicator'
-import Developer from './pages/Developer'
+import Communicator from './pages/Communicator.jsx'
+import Developer from './pages/Developer.jsx'
 
 export default function App() {
   return (

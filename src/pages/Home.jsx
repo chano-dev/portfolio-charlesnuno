@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 export default function Home() {
   return (
-    <>
+    <div className="home">
       <header>
         <h1>I'm Charles Nuno.</h1>
         <h2>Welcome to my Portfolios.</h2>
@@ -102,6 +102,6 @@ export default function Home() {
       <footer>
         <p>2003 - Designed and Developed by Charles Nuno. &copy;</p>
       </footer>
-    </>
+    </div>
   )
 }
