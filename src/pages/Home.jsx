@@ -1,4 +1,5 @@
 import Typewriter from '../components/Typewriter'
+import { Link } from 'react-router-dom'
 
 export default function Home() {
   return (
@@ -15,7 +16,7 @@ export default function Home() {
           <div className="cards-grid">
             {/* CARD: COMMUNICATION */}
             <article>
-              <a href="/co" className="card-border" aria-label="View Communicator portfolio">
+              <Link to="/co" className="card-border" aria-label="View Communicator portfolio">
                 <div className="card-inner card">
                   <div className="card-topbar">
                     <span className="card-icon icon-communication" aria-hidden="true"></span>
@@ -43,20 +44,20 @@ export default function Home() {
                     <span className="card-icon icon-communication" aria-hidden="true"></span>
                   </div>
                 </div>
-              </a>
+              </Link>
 
-              <a href="/co" className="btn-portfolio">
+              <Link to="/co" className="btn-portfolio">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                   <circle cx="12" cy="12" r="3" />
                   <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
                 </svg>
                 See Portfolio
-              </a>
+              </Link>
             </article>
 
             {/* CARD: PROGRAMMING */}
             <article>
-              <a href="/pr" className="card-border" aria-label="View Developer portfolio">
+              <Link to="/pr" className="card-border" aria-label="View Developer portfolio">
                 <div className="card-inner card">
                   <div className="card-topbar">
                     <span className="card-icon icon-programming" aria-hidden="true"></span>
@@ -84,15 +85,15 @@ export default function Home() {
                     <span className="card-icon icon-programming" aria-hidden="true"></span>
                   </div>
                 </div>
-              </a>
+              </Link>
 
-              <a href="/pr" className="btn-portfolio">
+              <Link to="/pr" className="btn-portfolio">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                   <circle cx="12" cy="12" r="3" />
                   <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
                 </svg>
                 See Portfolio
-              </a>
+              </Link>
             </article>
           </div>
         </div>

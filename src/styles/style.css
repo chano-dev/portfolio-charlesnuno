@@ -62,6 +62,13 @@ body {
     gap: 1.5rem;
 }
 
+#root {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    flex: 1;
+}
+
 /* ── HEADER ── */
 header {
     text-align: center;
@@ -214,7 +221,7 @@ article {
     mask-image: url('/img/icons/communication-icon.svg');
 }
 .icon-programming {
-    -webkit-mask-image: url('../img/icons/programming-icon.svg');
+    -webkit-mask-image: url('/img/icons/programming-icon.svg');
     mask-image: url('/img/icons/programming-icon.svg');
 }
 
