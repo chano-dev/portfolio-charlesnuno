@@ -1,3 +1,5 @@
+import Typewriter from '../components/Typewriter'
+
 export default function Home() {
   return (
     <>
@@ -8,10 +10,7 @@ export default function Home() {
 
       <main>
         <div className="cards-wrapper">
-          <p className="cards-label typewriter">
-            <span id="text"></span>
-            <span className="cursor">|</span>
-          </p>
+          <Typewriter />
 
           <div className="cards-grid">
             {/* CARD: COMMUNICATION */}
