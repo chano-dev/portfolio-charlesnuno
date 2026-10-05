@@ -7,11 +7,14 @@ import { SECTIONS } from '../data/communicatorSections'
 import Lightbox from '../components/communicator/Lightbox'
 import Work from '../components/communicator/Work'
 import Contacts from '../components/communicator/Contacts'
+import Drawer from '../components/communicator/Drawer'
 
 export default function Communicator() {
   const [activeSection, setActiveSection] = useState('about-me')
   const [selectedItem, setSelectedItem] = useState(null)
   const closeLightbox = () => setSelectedItem(null)
+  const [menuOpen, setMenuOpen] = useState(false)
+  const closeMenu = () => setMenuOpen(false)
 
   // O teu CSS depende de atributos no <html> e no <body>
   useEffect(() => {
@@ -35,8 +38,8 @@ export default function Communicator() {
 
   return (
     <>
-      <Navbar />
-
+      <Navbar menuOpen={menuOpen} onMenuToggle={() => setMenuOpen(!menuOpen)} />
+      <Drawer open={menuOpen} onClose={closeMenu} active={activeSection} onChange={setActiveSection} />
       <div className="layout">
         <SidebarLeft active={activeSection} onChange={setActiveSection} />
 
