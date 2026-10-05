@@ -6,6 +6,7 @@ import SidebarLeft from '../components/communicator/SidebarLeft'
 import { SECTIONS } from '../data/communicatorSections'
 import Lightbox from '../components/communicator/Lightbox'
 import Work from '../components/communicator/Work'
+import Contacts from '../components/communicator/Contacts'
 
 export default function Communicator() {
   const [activeSection, setActiveSection] = useState('about-me')
@@ -56,9 +57,7 @@ export default function Communicator() {
                 {s.id === 'work' && (
                   <Work onNavigate={setActiveSection} onSelect={setSelectedItem} />
                 )}
-                {s.id === 'contacts' && (
-                  <p>Conteúdo de {s.label} entra na próxima fase.</p>
-                )}
+                {s.id === 'contacts' && <Contacts />}
             </section>
           ))}
         </main>

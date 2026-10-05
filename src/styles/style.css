@@ -6,6 +6,13 @@
     list-style: none;
 }
 
+/*#root {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    flex: 1;
+} */
+
 :root {
 
     /* Light Mode*/
@@ -69,6 +76,7 @@ html { scroll-behavior: smooth; }
     flex-direction: column;
     padding: 40px 15px 0px 15px;
     gap: 1.5rem;
+
 
 /* ── HEADER ── */
 header {
