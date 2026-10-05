@@ -1,4 +1,6 @@
 import { SECTIONS } from '../../data/communicatorSections'
+import Typewriter from '../Typewriter'
+import { TAGLINES } from '../../data/taglines'
 
 export default function SidebarLeft({ active, onChange }) {
   return (
@@ -22,10 +24,9 @@ export default function SidebarLeft({ active, onChange }) {
         </nav>
       </div>
 
-      <p className="sidebar__tagline">
-        <span id="sidebar-typewriter"></span>
-        <span className="cursor" aria-hidden="true">|</span>
-      </p>
+<p className="sidebar__tagline">
+  <Typewriter texts={TAGLINES} typeSpeed={90} deleteSpeed={40} pause={1800} />
+</p>
     </aside>
   )
 }

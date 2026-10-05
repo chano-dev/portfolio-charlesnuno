@@ -1,5 +1,7 @@
 import { useState, useEffect } from 'react'
 import { SECTIONS } from '../../data/communicatorSections'
+import Typewriter from '../Typewriter'
+import { TAGLINES } from '../../data/taglines'
 
 export default function Drawer({ open, onClose, active, onChange }) {
   const [expanded, setExpanded] = useState(active)
@@ -33,6 +35,12 @@ export default function Drawer({ open, onClose, active, onChange }) {
   return (
     <>
       <aside className={`drawer ${open ? 'is-open' : ''}`} id="drawer" aria-label="Menu">
+        <div className="drawer__top">
+  <p className="drawer__tagline">
+    <Typewriter texts={TAGLINES} typeSpeed={90} deleteSpeed={40} pause={1800} />
+  </p>
+</div>
+<hr className="drawer__divider" />
         <nav className="drawer__nav" aria-label="Sections">
           <h2 className="drawer__nav-title">Sections</h2>
           <ul className="drawer__sections">
@@ -69,7 +77,6 @@ export default function Drawer({ open, onClose, active, onChange }) {
             })}
           </ul>
         </nav>
-
         <div className="portfolio-symbol drawer__deco" aria-hidden="true">
           <span className="portfolio-symbol__map"></span>
           <span className="portfolio-symbol__mask"></span>

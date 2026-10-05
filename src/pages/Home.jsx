@@ -1,6 +1,13 @@
 import Typewriter from '../components/Typewriter'
 import { Link } from 'react-router-dom'
 
+const HOME_TEXTS = [
+  'Relaxa, aqui qualquer escolha é a certa.',
+  'Relax, any choice here is the right one.',
+  'Détends-toi, ici, tout choix est le bon.',
+  '放轻松，在这里，怎么选都对。',
+]
+
 export default function Home() {
   return (
     <div className="home">
@@ -11,7 +18,9 @@ export default function Home() {
 
       <main>
         <div className="cards-wrapper">
-          <Typewriter />
+          <p className="cards-label typewriter">
+            <Typewriter texts={HOME_TEXTS} textId="text" />
+        </p>
 
           <div className="cards-grid">
             {/* CARD: COMMUNICATION */}
