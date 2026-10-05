@@ -20,13 +20,11 @@ export default function Communicator() {
   useEffect(() => {
     const root = document.documentElement
     root.dataset.portfolio = 'communication'
-    root.dataset.theme = 'light'
     root.dataset.lang = 'en'
     document.title = 'Communicator | Charles Nuno'
 
     return () => {
       delete root.dataset.portfolio
-      delete root.dataset.theme
       delete root.dataset.lang
     }
   }, [])

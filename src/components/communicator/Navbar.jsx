@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import ThemeButton from './ThemeButton'
 
 export default function Navbar({ menuOpen, onMenuToggle }) {
   return (
@@ -10,7 +11,7 @@ export default function Navbar({ menuOpen, onMenuToggle }) {
       </Link>
 
       <div className="navbar__controls" role="toolbar" aria-label="Page controls">
-        {/* Idioma e tema entram mais tarde */}
+        <ThemeButton />
         <Link to="/" className="navbar__btn navbar__btn--exit" aria-label="Exit to the homepage">
           <span className="btn-label">Exit</span>
           <span aria-hidden="true">

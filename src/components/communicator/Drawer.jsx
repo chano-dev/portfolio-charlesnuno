@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import { SECTIONS } from '../../data/communicatorSections'
 import Typewriter from '../Typewriter'
 import { TAGLINES } from '../../data/taglines'
+import ThemeButton from './ThemeButton'
 
 export default function Drawer({ open, onClose, active, onChange }) {
   const [expanded, setExpanded] = useState(active)
@@ -39,6 +40,7 @@ export default function Drawer({ open, onClose, active, onChange }) {
   <p className="drawer__tagline">
     <Typewriter texts={TAGLINES} typeSpeed={90} deleteSpeed={40} pause={1800} />
   </p>
+  <ThemeButton />
 </div>
 <hr className="drawer__divider" />
         <nav className="drawer__nav" aria-label="Sections">
