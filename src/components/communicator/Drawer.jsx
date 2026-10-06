@@ -3,6 +3,7 @@ import { SECTIONS } from '../../data/communicatorSections'
 import Typewriter from '../Typewriter'
 import { TAGLINES } from '../../data/taglines'
 import ThemeButton from './ThemeButton'
+import { useLanguage } from '../../context/LanguageContext'
 
 export default function Drawer({ open, onClose, active, onChange, current }) {
   const [expanded, setExpanded] = useState(active)
@@ -33,6 +34,8 @@ export default function Drawer({ open, onClose, active, onChange, current }) {
     else onChange(id)
   }
 
+  const { t } = useLanguage()
+
   return (
     <>
       <aside className={`drawer ${open ? 'is-open' : ''}`} id="drawer" aria-label="Menu">
@@ -44,7 +47,7 @@ export default function Drawer({ open, onClose, active, onChange, current }) {
 </div>
 <hr className="drawer__divider" />
         <nav className="drawer__nav" aria-label="Sections">
-          <h2 className="drawer__nav-title">Sections</h2>
+          <h2 className="drawer__nav-title">{t('sidebar.sections')}</h2>
           <ul className="drawer__sections">
             {SECTIONS.map((s) => {
               const isOpen = expanded === s.id

@@ -1,0 +1,78 @@
+// src/i18n/zh.js
+export default {
+     'nav.title':      '传播者',
+            'nav.lang':       '中文',
+            'nav.lang_short': 'ZH',
+            'nav.theme':      '浅色',
+            'nav.theme_dark': '深色',
+            'nav.exit':       '退出',
+
+            'sidebar.sections': '章节',
+
+            'toc.title': '本页内容',
+
+            'sections.about':    '关于我',
+            'sections.work':     '作品',
+            'sections.contacts': '联系方式',
+
+            'about.who':  '我是谁？',
+            'about.what': '我做什么？',
+            'about.why':  '为什么做？',
+            'about.who_intro': '你好！我叫 Charles Nuno。除了安哥拉人的身份，我是一名受过专业训练的传播者、天生的创意人、热爱学习的学生，也是一位专注的多语者。下面的图片记录了我作为传播者和程序员生活中的一些高光时刻。',
+            'about.what_intro': '无论是通过文字、图像、视频、声音还是代码——口头或视觉——我都懂得如何制造冲击力，唤起情感，或至少吸引人们的注意力。每个人都想脱颖而出，每家公司都想吸引注意力——所以我喜欢把自己看作一个握有恰如其分的"手铐"的人，能把注意力牢牢扣住。',
+            'about.what_skill_1': '文案写作与叙事讲故事',
+            'about.what_skill_2': '视频剪辑与制作',
+            'about.what_skill_3': '平面设计与视觉形象',
+            'about.what_skill_4': '内容策略与广告',
+            'about.why_intro': '我相信我天生拥有一个天赋和几份礼物——有什么区别？我只当面回答。但我确实有创造的天赋和沟通的礼物（包括倾听与表达）；说实话，我不觉得我的名字以"创造"开头是巧合……',
+            'about.acrostic_c': '创造力',
+            'about.acrostic_h': '谦逊',
+            'about.acrostic_a': '适应力',
+            'about.acrostic_r': '韧性',
+            'about.acrostic_l': '领导力',
+            'about.acrostic_e': '同理心',
+            'about.acrostic_s': '社交力',
+            'about.closing_pre': '既然你对我有了更多了解，也许是时候看看我的',
+            'about.closing_post': '。',
+
+            'work.mc': '文案MC与Copybattler',
+            'work.rv': '内容创作者与视频剪辑师',
+            'work.dc': '设计师与文案',
+            'work.open_link': '打开项目',
+            'work.mc_intro': '我18岁那年开始参加说唱对战，之前完全没有经验。我独自一人去看了RRPL第六季的总决赛，却在那个世界里感受到了归属感。我一直很擅长葡萄牙语课程，尤其是抒情文本写作，这让我有了尝试的信心。八个月后，我重返RRPL的舞台，不再是观众，而是一名对战选手。',
+            'work.rv_intro': '我的第一次报道其实只有音频。因为没能进入新闻发布会，我便转而采访了同样被拦在外面的球迷。我一直很喜欢美国的新闻报道和纪录片，而很早就学会英语也让我更能理解它们是如何抓住观众注意力的。我第一次拍摄视频报道是在Cidadela Desportiva体育场，但正是在报道了非洲综合格斗锦标赛之后，我才真正意识到自己在这方面确实有天赋。',
+            'work.dc_intro': '因为我一直觉得在电脑上做设计，比上视觉艺术课容易得多，于是我开始为自己创办的新闻门户网站制作设计作品。我从没想过自己只做新闻工作，但在撰写学术论文的过程中，我发现自己对文字很有天赋。最让我着迷的，是知道自己写的文字或做的设计，真的让某个人产生了感受或行动。',
+
+            'work.closing_pre': '看过我的作品后，如果感兴趣，欢迎通过',
+            'work.closing_post': '与我联系。',
+
+            /* Skills (per work subsection) */
+            'skills.title': '核心技能',
+            'skills.mc.1': '即兴发挥',
+            'skills.mc.2': '调研',
+            'skills.mc.3': '记忆力',
+            'skills.mc.4': '公众演讲',
+            'skills.mc.5': '创意写作',
+            'skills.mc.6': '沟通表达',
+            'skills.rv.1': '叙事讲故事',
+            'skills.rv.2': 'Adobe Premiere Pro',
+            'skills.rv.3': '音效设计',
+            'skills.rv.4': '采访',
+            'skills.rv.5': '脚本撰写',
+            'skills.rv.6': 'CapCut',
+            'skills.dc.1': 'Adobe Illustrator',
+            'skills.dc.2': 'Canva',
+            'skills.dc.3': 'Figma',
+            'skills.dc.4': '内容写作',
+            'skills.dc.5': '创造力',
+            'skills.dc.6': '诗人',
+
+            'contacts.email':  '电子邮件',
+            'contacts.phone':  '电话',
+            'contacts.social': '社交网络',
+
+            'gallery.see_more': '查看更多',
+            'gallery.see_less': '收起',
+
+            'tagline': '宾至如归。',
+}

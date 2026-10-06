@@ -1,8 +1,10 @@
 import { useTheme } from '../../context/ThemeContext'
+import { useLanguage } from '../../context/LanguageContext'
 
 export default function ThemeButton() {
   const { theme, toggleTheme } = useTheme()
   const dark = theme === 'dark'
+  const { t } = useLanguage()
 
   return (
     <button
@@ -12,7 +14,7 @@ export default function ThemeButton() {
       aria-pressed={dark}
       onClick={toggleTheme}
     >
-      <span className="btn-label">{dark ? 'Dark' : 'Light'}</span>
+      <span className="btn-label">{dark ? t('nav.theme_dark') : t('nav.theme')}</span>
 
       <span className="icon-light" aria-hidden="true" hidden={dark}>
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"

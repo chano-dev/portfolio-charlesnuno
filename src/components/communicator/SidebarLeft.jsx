@@ -1,12 +1,14 @@
 import { SECTIONS } from '../../data/communicatorSections'
 import Typewriter from '../Typewriter'
 import { TAGLINES } from '../../data/taglines'
+import { useLanguage } from '../../context/LanguageContext'
 
 export default function SidebarLeft({ active, onChange }) {
+  const { t } = useLanguage()
   return (
     <aside className="sidebar sidebar--left" aria-label="Navigation between sections">
       <div className="sidebar__inner">
-        <h2 className="sidebar__title">Sections</h2>
+        <h2 className="sidebar__title">{t('sidebar.sections')}</h2>
         <nav aria-label="Portfolio sections">
           <ul className="sidebar__sections">
             {SECTIONS.map((s) => (

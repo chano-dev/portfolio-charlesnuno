@@ -1,4 +1,8 @@
+import { useLanguage } from '../../context/LanguageContext'
+
+
 export default function Toc({ className, id, subs, current }) {
+  const { t } = useLanguage()
   return (
     <div className={className} id={id} aria-label="On this page">
       <h3 className="toc__title">
@@ -9,7 +13,7 @@ export default function Toc({ className, id, subs, current }) {
             <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76" />
           </svg>
         </span>
-        <span>On this page</span>
+        <span>{t('toc.title')}</span>
       </h3>
       <ul className="toc__links">
         {subs.map((sub) => (

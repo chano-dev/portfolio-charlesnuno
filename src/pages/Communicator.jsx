@@ -25,12 +25,10 @@ const currentSub = useScrollSpy(activeData.subs.map((sub) => sub.id))
   useEffect(() => {
     const root = document.documentElement
     root.dataset.portfolio = 'communication'
-    root.dataset.lang = 'en'
     document.title = 'Communicator | Charles Nuno'
 
     return () => {
       delete root.dataset.portfolio
-      delete root.dataset.lang
     }
   }, [])
 

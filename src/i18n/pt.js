@@ -1,0 +1,78 @@
+// src/i18n/pt.js
+export default {
+                'nav.title':      'Comunicador',
+            'nav.lang':       'Português',
+            'nav.lang_short': 'PT',
+            'nav.theme':      'Claro',
+            'nav.theme_dark': 'Escuro',
+            'nav.exit':       'Sair',
+
+            'sidebar.sections': 'Secções',
+
+            'toc.title': 'Nesta página',
+
+            'sections.about':    'Sobre Mim',
+            'sections.work':     'Trabalhos',
+            'sections.contacts': 'Contactos',
+
+            'about.who':  'QUEM SOU?',
+            'about.what': 'O QUE FAÇO?',
+            'about.why':  'PORQUE FAÇO?',
+            'about.who_intro': 'Saudações! O meu nome é Charles Nuno e, além de angolano, sou comunicador por formação, criativo por natureza, estudante por paixão e políglota por dedicação. As imagens abaixo captam alguns dos momentos marcantes da minha vida como comunicador.',
+            'about.what_intro': 'Seja através de palavras, imagens, vídeo, som — verbal ou visualmente — sei criar impacto que desperta emoção ou, no mínimo, prende a atenção das pessoas.',
+            'about.what_skill_1': 'Copywriting & Storytelling',
+            'about.what_skill_2': 'Edição e Produção de Vídeo',
+            'about.what_skill_3': 'Design Gráfico e Identidade Visual',
+            'about.what_skill_4': 'Estratégia de Conteúdo e Publicidade',
+            'about.why_intro': 'Acredito que nasci com um talento e vários dons — qual é a diferença? Só respondo pessoalmente. Mas tenho o talento de criar e o dom de comunicar (o que inclui tanto ouvir como falar); e, sinceramente, não acho que seja coincidência o meu nome começar por criatividade...',
+            'about.acrostic_c': 'Criatividade',
+            'about.acrostic_h': 'Humildade',
+            'about.acrostic_a': 'Adaptabilidade',
+            'about.acrostic_r': 'Resiliência',
+            'about.acrostic_l': 'Liderança',
+            'about.acrostic_e': 'Empatia',
+            'about.acrostic_s': 'Sociabilidade',
+            'about.closing_pre': 'Agora que sabes um pouco mais sobre mim, talvez seja altura de veres os meus',
+            'about.closing_post': '.',
+
+            'work.mc': 'Mestre de Cerimónia (MC) & Copybattler',
+            'work.rv': 'Criador de Conteúdo e Editor de Vídeo',
+            'work.dc': 'Designer e Copywriter',
+            'work.open_link': 'Abrir projecto',
+            'work.mc_intro': 'Comecei a batalhar aos 18 anos, com zero experiência. Fui sozinho assistir à final da 6.ª temporada da RRPL e senti-me em casa naquele mundo. Sempre tive jeito para Língua Portuguesa, sobretudo na escrita lírica, e isso deu-me confiança para tentar. Oito meses depois, voltei à RRPL não como espectador, mas como gladiador.',
+            'work.rv_intro': 'A minha primeira reportagem foi só áudio: não me deixaram entrar na conferência de imprensa, então entrevistei os fãs que estavam fora. Sempre adorei reportagens e documentários norte-americanos, e aprender inglês cedo ajudou-me a perceber como prendem a atenção do público. A minha primeira reportagem em vídeo foi na Cidadela Desportiva, mas foi depois de cobrir o Campeonato Africano de MMA que percebi que tinha mesmo talento para isto.',
+            'work.dc_intro': 'Como sempre achei mais fácil fazer arte no computador do que nas aulas de Artes Visuais, comecei a criar peças para o meu próprio portal de notícias. Nunca me vi a fazer apenas jornalismo, mas descobri um jeito para as palavras através dos trabalhos académicos que eu fazia. O que mais me fascina é saber que algo que escrevi ou desenhei fez alguém sentir ou agir.',
+
+            'work.closing_pre': 'Agora que já viste o que sei fazer, talvez seja altura de conversarmos. Podes encontrar-me através dos meus',
+            'work.closing_post': '.',
+
+            /* Skills (per work subsection) */
+            'skills.title': 'Competências-Chave',
+            'skills.mc.1': 'Improviso',
+            'skills.mc.2': 'Investigação',
+            'skills.mc.3': 'Memorização',
+            'skills.mc.4': 'Oratória',
+            'skills.mc.5': 'Escrita Criativa',
+            'skills.mc.6': 'Comunicação',
+            'skills.rv.1': 'Storytelling',
+            'skills.rv.2': 'Adobe Premiere Pro',
+            'skills.rv.3': 'Design Sonoro',
+            'skills.rv.4': 'Entrevistas',
+            'skills.rv.5': 'Guionismo',
+            'skills.rv.6': 'CapCut',
+            'skills.dc.1': 'Adobe Illustrator',
+            'skills.dc.2': 'Canva',
+            'skills.dc.3': 'Figma',
+            'skills.dc.4': 'Redação de Conteúdos',
+            'skills.dc.5': 'Criatividade',
+            'skills.dc.6': 'Poeta',
+
+            'contacts.email':  'Email',
+            'contacts.phone':  'Telefone',
+            'contacts.social': 'Redes Sociais',
+
+            'gallery.see_more': 'Ver mais',
+            'gallery.see_less': 'Ver menos',
+
+            'tagline': 'Sinta-se em casa.',
+}
