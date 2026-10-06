@@ -22,6 +22,11 @@ export default function Lightbox({ item, onClose }) {
   const isVideo = item.type === 'video'
   const isArchive = Boolean(item.maps)
   const skills = item.skills ?? []
+  const highlights = item.highlights ?? []
+  const descricao = item.descricaoKey ? t(item.descricaoKey) : item.descricao
+  const linkLabel = item.linkLabelKey
+    ? t(item.linkLabelKey)
+    : (item.linkLabel ?? t('work.open_link'))
 
   const boxClass = [
     'lightbox',
@@ -68,11 +73,11 @@ export default function Lightbox({ item, onClose }) {
           </div>
 
           <p className="lightbox__evento">{item.evento}</p>
-          <p className="lightbox__descricao">{item.descricao}</p>
+          <p className="lightbox__descricao">{descricao}</p>
 
           {item.link && (
             <a className="lightbox__link" href={item.link} target="_blank" rel="noopener noreferrer">
-              {item.linkLabel ?? t('work.open_link')}
+              {linkLabel}
             </a>
           )}
 
@@ -82,6 +87,17 @@ export default function Lightbox({ item, onClose }) {
               <div className="lightbox__skills-pills">
                 {skills.map((s) => (
                   <span key={s} className="skill-pill">{s}</span>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {highlights.length > 0 && (
+            <div className="lightbox__highlights">
+              <p className="lightbox__highlights-title">Highlights</p>
+              <div className="lightbox__highlights-pills">
+                {highlights.map((h) => (
+                  <span key={h} className="skill-pill">{h}</span>
                 ))}
               </div>
             </div>
