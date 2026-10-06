@@ -1,11 +1,10 @@
 import { useState, useEffect } from 'react'
-import { SECTIONS } from '../../data/communicatorSections'
 import Typewriter from '../Typewriter'
 import { TAGLINES } from '../../data/taglines'
 import ThemeButton from './ThemeButton'
 import { useLanguage } from '../../context/LanguageContext'
 
-export default function Drawer({ open, onClose, active, onChange, current }) {
+export default function Drawer({ sections, open, onClose, active, onChange, current }) {
   const { t } = useLanguage()
   const [expanded, setExpanded] = useState(active)
 
@@ -49,7 +48,7 @@ export default function Drawer({ open, onClose, active, onChange, current }) {
         <nav className="drawer__nav" aria-label="Sections">
           <h2 className="drawer__nav-title">{t('sidebar.sections')}</h2>
           <ul className="drawer__sections">
-            {SECTIONS.map((s) => {
+            {sections.map((s) => {
               const isOpen = expanded === s.id
               return (
                 <li

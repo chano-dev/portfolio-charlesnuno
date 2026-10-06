@@ -3,15 +3,21 @@ import ThemeButton from './ThemeButton'
 import LangButton from './LangButton'
 import { useLanguage } from '../../context/LanguageContext'
 
-export default function Navbar({ menuOpen, onMenuToggle }) {
+export default function Navbar({
+  menuOpen,
+  onMenuToggle,
+  homePath = '/co',
+  iconClass = 'icon-communication',
+  titleKey = 'nav.title',
+}) {
   const { t } = useLanguage()
 
   return (
     <>
      <header className="navbar">
-      <Link to="/co" className="navbar__logo" aria-label="Back to top of the Communicator portfolio">
-        <span className="navbar__logo-icon icon-communication" aria-hidden="true"></span>
-        <h1 className="navbar__logo-name">{t('nav.title')}</h1>
+      <Link to={homePath} className="navbar__logo" aria-label="Back to top of the portfolio">
+        <span className={`navbar__logo-icon ${iconClass}`} aria-hidden="true"></span>
+        <h1 className="navbar__logo-name">{t(titleKey)}</h1>
       </Link>
 
       <div className="navbar__controls" role="toolbar" aria-label="Page controls">

@@ -1,9 +1,8 @@
-import { SECTIONS } from '../../data/communicatorSections'
 import Typewriter from '../Typewriter'
 import { TAGLINES } from '../../data/taglines'
 import { useLanguage } from '../../context/LanguageContext'
 
-export default function SidebarLeft({ active, onChange }) {
+export default function SidebarLeft({ sections, active, onChange }) {
   const { t } = useLanguage()
 
   return (
@@ -12,7 +11,7 @@ export default function SidebarLeft({ active, onChange }) {
         <h2 className="sidebar__title">{t('sidebar.sections')}</h2>
         <nav aria-label="Portfolio sections">
           <ul className="sidebar__sections">
-            {SECTIONS.map((s) => (
+            {sections.map((s) => (
               <li key={s.id} className="sidebar__section-item">
                 <button
                   type="button"

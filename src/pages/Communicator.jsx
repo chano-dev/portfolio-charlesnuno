@@ -43,9 +43,9 @@ useEffect(() => {
   return (
     <>
       <Navbar menuOpen={menuOpen} onMenuToggle={() => setMenuOpen(!menuOpen)} />
-      <Drawer open={menuOpen} onClose={closeMenu} active={activeSection} onChange={setActiveSection} current={currentSub}/>
+      <Drawer sections={SECTIONS} open={menuOpen} onClose={closeMenu} active={activeSection} onChange={setActiveSection} current={currentSub}/>
       <div className="layout">
-        <SidebarLeft active={activeSection} onChange={setActiveSection} />
+        <SidebarLeft sections={SECTIONS} active={activeSection} onChange={setActiveSection} />
 
         <main className="content" id="main-content">
           <Lightbox item={selectedItem} onClose={closeLightbox} />

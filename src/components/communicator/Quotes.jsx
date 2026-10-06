@@ -4,7 +4,7 @@ import useMediaQuery from '../../hooks/useMediaQuery'
 
 const INTERVAL = 5000
 
-export default function Quotes() {
+export default function Quotes({ quotes = QUOTES }) {
   const [index, setIndex] = useState(0)
   const [step, setStep] = useState(0) // largura de um item + gap, em px (desktop)
   const trackRef = useRef(null)
@@ -26,10 +26,10 @@ export default function Quotes() {
   // Avança de 5 em 5 segundos, em loop
   useEffect(() => {
     const timer = setInterval(() => {
-      setIndex((i) => (i + 1) % QUOTES.length)
+      setIndex((i) => (i + 1) % quotes.length)
     }, INTERVAL)
     return () => clearInterval(timer)
-  }, [])
+  }, [quotes])
 
 const isDesktop = useMediaQuery('(min-width: 768px)')
   const transform = isDesktop
@@ -43,7 +43,7 @@ const isDesktop = useMediaQuery('(min-width: 768px)')
         className="quotes-track"
         style={{ transform, transition: 'transform 700ms ease-in-out' }}
       >
-        {QUOTES.map((q) => (
+        {quotes.map((q) => (
           <figure key={q.id} className="quote-item">
             <blockquote className="quote-item__text">{q.text}</blockquote>
             <figcaption className="quote-item__author">— {q.author}</figcaption>

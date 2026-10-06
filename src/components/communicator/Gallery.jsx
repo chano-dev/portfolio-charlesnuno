@@ -2,7 +2,7 @@ import { useState } from 'react'
 import useMediaQuery from '../../hooks/useMediaQuery'
 import { useLanguage } from '../../context/LanguageContext'
 
-export default function Gallery({ tabs, items, label, onSelect }) {
+export default function Gallery({ tabs, items, label, onSelect, hideTabs = false }) {
   const { t } = useLanguage()
   const [activeTab, setActiveTab] = useState(tabs[0].id)
   const [expanded, setExpanded] = useState(false)
@@ -19,7 +19,11 @@ export default function Gallery({ tabs, items, label, onSelect }) {
 
   return (
     <>
-      <div className="photo-tabs" role="tablist" aria-label={label}>
+      <div
+        className={`photo-tabs ${hideTabs ? 'tabs-hidden' : ''}`}
+        role="tablist"
+        aria-label={label}
+      >
         {tabs.map((tab) => (
           <button
             key={tab.id}
