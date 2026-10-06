@@ -11,8 +11,10 @@ import Drawer from '../components/communicator/Drawer'
 import Toc from '../components/communicator/Toc'
 import CompassButton from '../components/communicator/CompassButton'
 import useScrollSpy from '../hooks/useScrollSpy'
+import { useLanguage } from '../context/LanguageContext'
 
 export default function Communicator() {
+  const { t } = useLanguage()
   const [activeSection, setActiveSection] = useState('about-me')
   const [selectedItem, setSelectedItem] = useState(null)
   const closeLightbox = () => setSelectedItem(null)
@@ -55,7 +57,7 @@ useEffect(() => {
               data-section={s.id}
               hidden={activeSection !== s.id}
             >
-              <h2 className="section__title">{s.label}</h2>
+              <h2 className="section__title">{t(s.labelKey)}</h2>
               <Toc
   className="toc-mobile"
   id={`toc-mobile-${s.id}`}

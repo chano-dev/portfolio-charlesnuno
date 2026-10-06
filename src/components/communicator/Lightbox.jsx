@@ -1,6 +1,9 @@
 import { useEffect } from 'react'
+import { useLanguage } from '../../context/LanguageContext'
 
 export default function Lightbox({ item, onClose }) {
+  const { t } = useLanguage()
+
   useEffect(() => {
     if (!item) return
     const onKeyDown = (e) => {
@@ -23,7 +26,7 @@ export default function Lightbox({ item, onClose }) {
   const boxClass = [
     'lightbox',
     isVideo && 'lightbox--video',
-    !isVideo && !isArchive && 'lightbox--contain', // Work mostra a imagem inteira
+    !isVideo && !isArchive && 'lightbox--contain',
   ].filter(Boolean).join(' ')
 
   return (
@@ -69,7 +72,7 @@ export default function Lightbox({ item, onClose }) {
 
           {item.link && (
             <a className="lightbox__link" href={item.link} target="_blank" rel="noopener noreferrer">
-              {item.linkLabel ?? 'Open link'}
+              {item.linkLabel ?? t('work.open_link')}
             </a>
           )}
 

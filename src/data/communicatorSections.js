@@ -1,29 +1,29 @@
 export const SECTIONS = [
   {
     id: 'about-me',
-    label: 'About Me',
+    labelKey: 'sections.about',
     subs: [
-      { id: 'who-am-i', label: 'Who Am I?' },
-      { id: 'what-i-do', label: 'What Do I Do?' },
-      { id: 'why-i-do', label: 'Why Do I Do It?' },
+      { id: 'who-am-i', labelKey: 'about.who' },
+      { id: 'what-i-do', labelKey: 'about.what' },
+      { id: 'why-i-do', labelKey: 'about.why' },
     ],
   },
   {
     id: 'work',
-    label: 'Work',
+    labelKey: 'sections.work',
     subs: [
-      { id: 'master-of-ceremony', label: 'Written MC & Copybattler' },
-      { id: 'content-creator-video-editor', label: 'Content Creator & Video Editor' },
-      { id: 'designer-copywriter', label: 'Designer & Copywriter' },
+      { id: 'master-of-ceremony', labelKey: 'work.mc' },
+      { id: 'content-creator-video-editor', labelKey: 'work.rv' },
+      { id: 'designer-copywriter', labelKey: 'work.dc' },
     ],
   },
   {
     id: 'contacts',
-    label: 'Contacts',
+    labelKey: 'sections.contacts',
     subs: [
-      { id: 'email', label: 'Email' },
-      { id: 'phone', label: 'Phone' },
-      { id: 'social', label: 'Social Media' },
+      { id: 'email', labelKey: 'contacts.email' },
+      { id: 'phone', labelKey: 'contacts.phone' },
+      { id: 'social', labelKey: 'contacts.social' },
     ],
   },
 ]

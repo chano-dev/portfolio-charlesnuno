@@ -1,8 +1,8 @@
 import { useLanguage } from '../../context/LanguageContext'
 
-
 export default function Toc({ className, id, subs, current }) {
   const { t } = useLanguage()
+
   return (
     <div className={className} id={id} aria-label="On this page">
       <h3 className="toc__title">
@@ -19,7 +19,7 @@ export default function Toc({ className, id, subs, current }) {
         {subs.map((sub) => (
           <li key={sub.id}>
             <a href={`#${sub.id}`} className={current === sub.id ? 'is-active' : ''}>
-              {sub.label}
+              {t(sub.labelKey)}
             </a>
           </li>
         ))}

@@ -5,6 +5,7 @@ import { useLanguage } from '../../context/LanguageContext'
 
 export default function SidebarLeft({ active, onChange }) {
   const { t } = useLanguage()
+
   return (
     <aside className="sidebar sidebar--left" aria-label="Navigation between sections">
       <div className="sidebar__inner">
@@ -18,7 +19,7 @@ export default function SidebarLeft({ active, onChange }) {
                   className={`sidebar__section-btn ${active === s.id ? 'is-active' : ''}`}
                   onClick={() => onChange(s.id)}
                 >
-                  <span>{s.label}</span>
+                  <span>{t(s.labelKey)}</span>
                 </button>
               </li>
             ))}
@@ -26,9 +27,9 @@ export default function SidebarLeft({ active, onChange }) {
         </nav>
       </div>
 
-<p className="sidebar__tagline">
-  <Typewriter texts={TAGLINES} typeSpeed={90} deleteSpeed={40} pause={1800} />
-</p>
+      <p className="sidebar__tagline">
+        <Typewriter texts={TAGLINES} typeSpeed={90} deleteSpeed={40} pause={1800} />
+      </p>
     </aside>
   )
 }

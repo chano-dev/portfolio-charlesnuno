@@ -1,7 +1,9 @@
 import { useState } from 'react'
 import useMediaQuery from '../../hooks/useMediaQuery'
+import { useLanguage } from '../../context/LanguageContext'
 
 export default function Gallery({ tabs, items, label, onSelect }) {
+  const { t } = useLanguage()
   const [activeTab, setActiveTab] = useState(tabs[0].id)
   const [expanded, setExpanded] = useState(false)
   const isDesktop = useMediaQuery('(min-width: 768px)')
@@ -12,22 +14,22 @@ export default function Gallery({ tabs, items, label, onSelect }) {
 
   const changeTab = (id) => {
     setActiveTab(id)
-    setExpanded(false) // cada aba começa recolhida
+    setExpanded(false)
   }
 
   return (
     <>
       <div className="photo-tabs" role="tablist" aria-label={label}>
-        {tabs.map((t) => (
+        {tabs.map((tab) => (
           <button
-            key={t.id}
+            key={tab.id}
             type="button"
             role="tab"
-            className={`photo-tab ${activeTab === t.id ? 'is-active' : ''}`}
-            aria-selected={activeTab === t.id}
-            onClick={() => changeTab(t.id)}
+            className={`photo-tab ${activeTab === tab.id ? 'is-active' : ''}`}
+            aria-selected={activeTab === tab.id}
+            onClick={() => changeTab(tab.id)}
           >
-            {t.label}
+            {tab.label}
           </button>
         ))}
       </div>
@@ -62,7 +64,9 @@ export default function Gallery({ tabs, items, label, onSelect }) {
           aria-expanded={expanded}
           onClick={() => setExpanded(!expanded)}
         >
-          <span className="photo-more-btn__label">{expanded ? 'See less' : 'See more'}</span>
+          <span className="photo-more-btn__label">
+            {t(expanded ? 'gallery.see_less' : 'gallery.see_more')}
+          </span>
           <svg className="photo-more-btn__icon" width="16" height="16" viewBox="0 0 24 24"
                fill="none" stroke="currentColor" strokeWidth="2.5"
                strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
