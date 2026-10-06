@@ -4,7 +4,7 @@ import Typewriter from '../Typewriter'
 import { TAGLINES } from '../../data/taglines'
 import ThemeButton from './ThemeButton'
 
-export default function Drawer({ open, onClose, active, onChange }) {
+export default function Drawer({ open, onClose, active, onChange, current }) {
   const [expanded, setExpanded] = useState(active)
 
   // Quando a secção activa muda, o acordeão abre nela
@@ -70,7 +70,13 @@ export default function Drawer({ open, onClose, active, onChange }) {
                   <ul className="drawer__sub-links" id={`drawer-sub-${s.id}`} hidden={!isOpen}>
                     {s.subs.map((sub) => (
                       <li key={sub.id}>
-                        <a href={`#${sub.id}`} onClick={onClose}>{sub.label}</a>
+<a
+  href={`#${sub.id}`}
+  className={current === sub.id ? 'is-active' : ''}
+  onClick={onClose}
+>
+  {sub.label}
+</a>
                       </li>
                     ))}
                   </ul>

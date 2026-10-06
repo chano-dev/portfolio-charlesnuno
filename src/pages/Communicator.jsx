@@ -8,6 +8,9 @@ import Lightbox from '../components/communicator/Lightbox'
 import Work from '../components/communicator/Work'
 import Contacts from '../components/communicator/Contacts'
 import Drawer from '../components/communicator/Drawer'
+import Toc from '../components/communicator/Toc'
+import CompassButton from '../components/communicator/CompassButton'
+import useScrollSpy from '../hooks/useScrollSpy'
 
 export default function Communicator() {
   const [activeSection, setActiveSection] = useState('about-me')
@@ -15,6 +18,8 @@ export default function Communicator() {
   const closeLightbox = () => setSelectedItem(null)
   const [menuOpen, setMenuOpen] = useState(false)
   const closeMenu = () => setMenuOpen(false)
+  const activeData = SECTIONS.find((s) => s.id === activeSection)
+const currentSub = useScrollSpy(activeData.subs.map((sub) => sub.id))
 
   // O teu CSS depende de atributos no <html> e no <body>
   useEffect(() => {
@@ -29,15 +34,16 @@ export default function Communicator() {
     }
   }, [])
 
-  useEffect(() => {
-    document.body.dataset.activeSection = activeSection
-    window.scrollTo(0, 0)
-  }, [activeSection])
+useEffect(() => {
+  document.body.dataset.activeSection = activeSection
+  window.scrollTo(0, 0)
+  document.getElementById('main-content')?.scrollTo(0, 0)
+}, [activeSection])
 
   return (
     <>
       <Navbar menuOpen={menuOpen} onMenuToggle={() => setMenuOpen(!menuOpen)} />
-      <Drawer open={menuOpen} onClose={closeMenu} active={activeSection} onChange={setActiveSection} />
+      <Drawer open={menuOpen} onClose={closeMenu} active={activeSection} onChange={setActiveSection} current={currentSub}/>
       <div className="layout">
         <SidebarLeft active={activeSection} onChange={setActiveSection} />
 
@@ -52,6 +58,12 @@ export default function Communicator() {
               hidden={activeSection !== s.id}
             >
               <h2 className="section__title">{s.label}</h2>
+              <Toc
+  className="toc-mobile"
+  id={`toc-mobile-${s.id}`}
+  subs={s.subs}
+  current={s.id === activeSection ? currentSub : null}
+/>
                 {s.id === 'about-me' && (
                   <AboutMe onNavigate={setActiveSection} onSelect={setSelectedItem} />
                 )}
@@ -61,10 +73,11 @@ export default function Communicator() {
                 {s.id === 'contacts' && <Contacts />}
             </section>
           ))}
+          <CompassButton activeSection={activeSection} />
         </main>
 
         <aside className="sidebar sidebar--right" aria-label="Current page index">
-          <div className="toc" id="toc-desktop"></div>
+          <Toc className="toc" id="toc-desktop" subs={activeData.subs} current={currentSub} />
           <div className="portfolio-symbol sidebar__deco" aria-hidden="true">
             <span className="portfolio-symbol__map"></span>
             <span className="portfolio-symbol__mask"></span>
