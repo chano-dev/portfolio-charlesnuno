@@ -1,6 +1,7 @@
 import Gallery from '../shared/Gallery'
 import { WORK_SECTIONS } from '../../data/work'
 import { useLanguage } from '../../context/LanguageContext'
+import SkillList from '../shared/SkillList'
 
 export default function Work({ onNavigate, onSelect }) {
   const { t } = useLanguage()
@@ -14,14 +15,7 @@ export default function Work({ onNavigate, onSelect }) {
 
           <Gallery tabs={s.tabs} items={s.items} label={s.tabsLabel} onSelect={onSelect} />
 
-          <div className="article-skills">
-            <h4 className="article-skills__title">{t('skills.title')}</h4>
-            <ul className="article-skills__list">
-              {s.skillKeys.map((key) => (
-                <li key={key} className="article-skills__item">{t(key)}</li>
-              ))}
-            </ul>
-          </div>
+          <SkillList skillKeys={s.skillKeys} />
 
           {i === WORK_SECTIONS.length - 1 && (
             <p className="article__text">

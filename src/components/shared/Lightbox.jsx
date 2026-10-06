@@ -1,5 +1,6 @@
 import { useEffect } from 'react'
 import { useLanguage } from '../../context/LanguageContext'
+import SkillPill from './SkillPill'
 
 export default function Lightbox({ item, onClose }) {
   const { t } = useLanguage()
@@ -86,7 +87,7 @@ export default function Lightbox({ item, onClose }) {
               <p className="lightbox__skills-title">Skills &amp; Tools</p>
               <div className="lightbox__skills-pills">
                 {skills.map((s) => (
-                  <span key={s} className="skill-pill">{s}</span>
+                  <SkillPill key={s} label={s} />
                 ))}
               </div>
             </div>
@@ -97,7 +98,7 @@ export default function Lightbox({ item, onClose }) {
               <p className="lightbox__highlights-title">Highlights</p>
               <div className="lightbox__highlights-pills">
                 {highlights.map((h) => (
-                  <span key={h} className="skill-pill">{h}</span>
+                  <SkillPill key={h} label={h} />
                 ))}
               </div>
             </div>
