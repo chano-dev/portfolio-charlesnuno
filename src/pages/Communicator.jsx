@@ -31,6 +31,7 @@ const currentSub = useScrollSpy(activeData.subs.map((sub) => sub.id))
 
     return () => {
       delete root.dataset.portfolio
+      document.title = 'Portfolio | Charles Nuno'
     }
   }, [])
 
