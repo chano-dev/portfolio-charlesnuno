@@ -225,10 +225,10 @@ article {
     mask-image: url('/img/icons/programming-icon.svg');
 }
 
-article:first-child .card-border:hover .card-icon {
+.card--communication .card-border:hover .card-icon {
     background-color: var(--yellow-a);
 }
-article:last-child .card-border:hover .card-icon {
+.card--programming .card-border:hover .card-icon {
     background-color: var(--red-a);
 }
 
@@ -245,10 +245,10 @@ article:last-child .card-border:hover .card-icon {
     z-index: 3;
     transition: color 0.2s ease-in-out;
 }
-article:first-child .card-border:hover .card-title {
+.card--communication .card-border:hover .card-title {
     color: var(--yellow-a);
 }
-article:last-child .card-border:hover .card-title {
+.card--programming .card-border:hover .card-title {
     color: var(--red-a);
 }
 
@@ -278,17 +278,17 @@ article:last-child .card-border:hover .card-title {
     transition: background 0.25s ease-in-out;
 }
 
-.cards-grid article:first-child .card-image-frame::before {
+.cards-grid .card--communication .card-image-frame::before {
     background: linear-gradient(135deg, var(--yellow-b) 0%, #ffffff 25%, #ffffff 75%, var(--yellow-b) 100%);
 }
-.cards-grid article:first-child .card-border:hover .card-image-frame::before {
+.cards-grid .card--communication .card-border:hover .card-image-frame::before {
     background: linear-gradient(135deg, var(--yellow-a) 0%, #ffffff 45%, #ffffff 55%, var(--yellow-a) 100%);
 }
 
-.cards-grid article:last-child .card-image-frame::before {
+.cards-grid .card--programming .card-image-frame::before {
     background: linear-gradient(135deg, var(--red-b) 0%, #ffffff 25%, #ffffff 75%, var(--red-b) 100%);
 }
-.cards-grid article:last-child .card-border:hover .card-image-frame::before {
+.cards-grid .card--programming .card-border:hover .card-image-frame::before {
     background: linear-gradient(135deg, var(--red-a) 0%, #ffffff 45%, #ffffff 55%, var(--red-a) 100%);
 }
 
@@ -341,11 +341,11 @@ article .card-border:hover .card-desc {
     cursor: pointer;
 }
 
-article:first-child .btn-portfolio:hover {
+.card--communication .btn-portfolio:hover {
     background: var(--yellow-a);
     border-radius: 0.75rem;
 }
-article:last-child .btn-portfolio:hover {
+.card--programming .btn-portfolio:hover {
     background: var(--red-a);
     border-radius: 0.75rem;
 }
