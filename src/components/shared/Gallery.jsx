@@ -21,24 +21,13 @@ export default function Gallery({ tabs, items, label, onSelect, hideTabs = false
 
   return (
     <>
-      <div
-        className={`photo-tabs ${hideTabs ? 'tabs-hidden' : ''}`}
-        role="tablist"
-        aria-label={label}
-      >
-        {tabs.map((tab) => (
-          <button
-            key={tab.id}
-            type="button"
-            role="tab"
-            className={`photo-tab ${activeTab === tab.id ? 'is-active' : ''}`}
-            aria-selected={activeTab === tab.id}
-            onClick={() => changeTab(tab.id)}
-          >
-            {tab.label}
-          </button>
-        ))}
-      </div>
+      <PhotoTabs
+        tabs={tabs}
+        activeTab={activeTab}
+        onChange={changeTab}
+        label={label}
+        hideTabs={hideTabs}
+      />
 
       <div className="photo-grid" role="list" aria-label={`${label} gallery`}>
         {visible.map((item) => (
