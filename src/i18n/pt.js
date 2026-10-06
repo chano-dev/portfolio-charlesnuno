@@ -102,4 +102,6 @@ export default {
             'pr.projects.open_github': "Ver no GitHub",
             'pr.projects.closing_pre': "Agora que já viste o que construo, talvez seja altura de conversarmos. Podes encontrar-me através dos meus",
             'pr.projects.closing_post': ".",
+            'pr.about.closing_pre': "Agora que sabes um pouco mais sobre mim, talvez seja altura de veres os meus",
+            'pr.about.closing_post': ".",
 }

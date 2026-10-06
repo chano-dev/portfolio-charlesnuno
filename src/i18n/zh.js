@@ -102,4 +102,6 @@ export default {
             'pr.projects.open_github': "在 GitHub 查看",
             'pr.projects.closing_pre': "看过我做的东西之后，如果感兴趣，欢迎通过",
             'pr.projects.closing_post': "与我联系。",
+            'pr.about.closing_pre': "既然你对我有了更多了解，也许是时候看看我的",
+            'pr.about.closing_post': "。",
 }

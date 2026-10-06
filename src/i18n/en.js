@@ -111,4 +111,6 @@ export default {
             'pr.projects.open_github': "View on GitHub",
             'pr.projects.closing_pre': "Now that you've seen what I build, maybe it's time we talked. You can reach me through my",
             'pr.projects.closing_post': ".",
+            'pr.about.closing_pre': "Now that you know a bit more about me, maybe it's time to check out my",
+            'pr.about.closing_post': ".",
 }
