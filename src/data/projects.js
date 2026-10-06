@@ -18,6 +18,7 @@ export const PROJECT_SECTIONS = [
       { id: 'charles-nuno', label: 'Charles Nuno' },
       { id: 'edukwanzas', label: 'EduKwanzas' },
       { id: 'candgest-viagens', label: 'Candgest Viagens' },
+      { id: 'narciso-pedro', label: 'Narciso Pedro' },
       { id: 'portfolio-antigo', label: 'Old Portfolio' },
     ],
     items: [
@@ -73,6 +74,17 @@ export const PROJECT_SECTIONS = [
           'Subtle Scroll Animations',
         ],
         link: LIVE_CANDGEST,
+      }),
+      project({
+        id: 'narciso-pedro',
+        tab: 'narciso-pedro',
+        file: 'portfolio-atual.png',
+        alt: 'Placeholder: site pessoal de Narciso Pedro',
+        contexto: 'Front-End',
+        ano: '—',
+        evento: 'Site pessoal — Narciso Pedro (a preencher)',
+        descricao: 'Dados em falta. A completar numa segunda ronda com o Charles (link, ano, skills, highlights e descrição).',
+        skills: [],
       }),
       project({
         id: 'portfolio-antigo',
