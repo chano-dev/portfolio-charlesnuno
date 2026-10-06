@@ -92,6 +92,7 @@ export const PROJECT_SECTIONS = [
           'Custom Visual Direction (Typography, Colours, Content)',
           'Institutional & Professional Focus',
         ],
+        link: 'https://narcisopedro.lovable.app',
       }),
       project({
         id: 'portfolio-antigo',
