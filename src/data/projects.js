@@ -1,3 +1,4 @@
+import { validateGallery, validateSections } from '../utils/validatePortfolioData'
 const project = ({ file, ...rest }) => ({ type: 'image', img: `/img/pr/${file}`, ...rest })
 
 const GITHUB_MOLLEY = 'https://github.com/chano-dev/molleyoffice'
@@ -168,3 +169,9 @@ export const PROJECT_SECTIONS = [
     skillKeys: ['pr.skills.be.1', 'pr.skills.be.2', 'pr.skills.be.3', 'pr.skills.be.4'],
   },
 ]
+
+if (import.meta.env.DEV) {
+  PROJECT_SECTIONS.forEach((sec) => {
+    validateGallery({ tabs: sec.tabs, items: sec.items, name: `Projects.${sec.id}` })
+  })
+}

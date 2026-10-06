@@ -1,3 +1,4 @@
+import { validateGallery } from '../utils/validatePortfolioData'
 export const ARCHIVES_TABS = [{ id: 'archives', label: 'Archives' }]
 
 export const ARCHIVES = [
@@ -74,3 +75,6 @@ export const ARCHIVES = [
     alt: 'Charles with his team at Rádio Eclésia',
   },
 ]
+if (import.meta.env.DEV) {
+  validateGallery({ tabs: ARCHIVES_TABS, items: ARCHIVES, name: 'Archives' })
+}

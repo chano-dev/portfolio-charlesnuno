@@ -1,3 +1,4 @@
+import { validateSections } from '../utils/validatePortfolioData'
 export const DEVELOPER_SECTIONS = [
   {
     id: 'about-me',
@@ -26,3 +27,7 @@ export const DEVELOPER_SECTIONS = [
     ],
   },
 ]
+
+if (import.meta.env.DEV) {
+  validateSections({ sections: DEVELOPER_SECTIONS, name: 'DeveloperSections' })
+}

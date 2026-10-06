@@ -1,3 +1,4 @@
+import { validateGallery, validateSections } from '../utils/validatePortfolioData'
 const yt = (id) => `https://img.youtube.com/vi/${id}/mqdefault.jpg`
 
 /* ── MC & Copybattler ── */
@@ -155,3 +156,8 @@ introKey: 'work.dc_intro',
 skillKeys: ['skills.dc.1', 'skills.dc.2', 'skills.dc.3', 'skills.dc.4', 'skills.dc.5', 'skills.dc.6'],
   },
 ]
+if (import.meta.env.DEV) {
+  WORK_SECTIONS.forEach((sec) => {
+    validateGallery({ tabs: sec.tabs, items: sec.items, name: `Work.${sec.id}` })
+  })
+}
