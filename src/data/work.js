@@ -1,4 +1,4 @@
-import { validateGallery, validateSections } from '../utils/validatePortfolioData'
+import { validateGallery } from '../utils/validatePortfolioData'
 const yt = (id) => `https://img.youtube.com/vi/${id}/mqdefault.jpg`
 
 /* ── MC & Copybattler ── */

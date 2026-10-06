@@ -1,4 +1,4 @@
-import { validateGallery, validateSections } from '../utils/validatePortfolioData'
+import { validateGallery } from '../utils/validatePortfolioData'
 const project = ({ file, ...rest }) => ({ type: 'image', img: `/img/pr/${file}`, ...rest })
 
 const GITHUB_MOLLEY = 'https://github.com/chano-dev/molleyoffice'

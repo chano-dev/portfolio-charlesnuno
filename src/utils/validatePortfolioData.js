@@ -32,11 +32,11 @@ export function validateSections({ sections = [], name = 'Sections' }) {
   }
 }
 
-export function validateI18nKeys(keys = [], context = 'i18n') {
+export function validateI18nKeys(keys = []) {
   if (!import.meta.env.DEV) return
   keys.forEach((k) => {
     if (typeof k === 'string' && k) {
-      // will be checked by caller via t? but keep simple
+      // no-op
     }
   })
 }
