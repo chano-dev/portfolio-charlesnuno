@@ -118,4 +118,5 @@ export default {
             'pr.about.acrostic_l': "领导力",
             'pr.about.acrostic_e': "同理心",
             'pr.about.acrostic_s': "社交力",
+            'pr.nav.title': '开发者',
 }

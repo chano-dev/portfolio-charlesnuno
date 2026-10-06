@@ -118,4 +118,5 @@ export default {
             'pr.about.acrostic_l': "Liderança",
             'pr.about.acrostic_e': "Empatia",
             'pr.about.acrostic_s': "Sociabilidade",
+            'pr.nav.title': 'Programador',
 }

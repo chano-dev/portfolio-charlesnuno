@@ -119,4 +119,5 @@ export default {
             'pr.about.acrostic_l': "Leadership",
             'pr.about.acrostic_e': "Empathie",
             'pr.about.acrostic_s': "Sociabilité",
+            'pr.nav.title': 'Développeur',
 }
