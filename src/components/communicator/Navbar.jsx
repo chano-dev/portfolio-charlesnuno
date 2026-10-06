@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
-import ThemeButton from './ThemeButton'
-import LangButton from './LangButton'
+import ThemeButton from '../shared/ThemeButton'
+import LangButton from '../shared/LangButton'
 import { useLanguage } from '../../context/LanguageContext'
 
 export default function Navbar({

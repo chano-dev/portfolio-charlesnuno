@@ -1,4 +1,4 @@
-import Gallery from './Gallery'
+import Gallery from '../shared/Gallery'
 import { WORK_SECTIONS } from '../../data/work'
 import { useLanguage } from '../../context/LanguageContext'
 

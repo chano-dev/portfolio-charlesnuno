@@ -1,4 +1,4 @@
-import Typewriter from '../components/Typewriter'
+import Typewriter from '../components/shared/Typewriter'
 import { Link } from 'react-router-dom'
 
 const HOME_TEXTS = [

@@ -1,5 +1,5 @@
-import Gallery from '../communicator/Gallery'
-import Quotes from '../communicator/Quotes'
+import Gallery from '../shared/Gallery'
+import Quotes from '../shared/Quotes'
 import { ARCHIVES_DEVELOPER, ARCHIVES_DEVELOPER_TABS } from '../../data/archivesDeveloper'
 import { QUOTES_DEVELOPER } from '../../data/quotesDeveloper'
 import { useLanguage } from '../../context/LanguageContext'

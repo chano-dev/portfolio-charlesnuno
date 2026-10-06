@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import Typewriter from '../shared/Typewriter'
+import Typewriter from './Typewriter'
 import { TAGLINES } from '../../data/taglines'
 import ThemeButton from '../shared/ThemeButton'
 import { useLanguage } from '../../context/LanguageContext'

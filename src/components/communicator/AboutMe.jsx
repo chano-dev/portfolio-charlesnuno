@@ -1,5 +1,5 @@
-import Gallery from './Gallery'
-import Quotes from './Quotes'
+import Gallery from '../shared/Gallery'
+import Quotes from '../shared/Quotes'
 import { ARCHIVES, ARCHIVES_TABS } from '../../data/archives'
 import { useLanguage } from '../../context/LanguageContext'
 

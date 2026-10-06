@@ -1,4 +1,4 @@
-import Gallery from '../communicator/Gallery'
+import Gallery from '../shared/Gallery'
 import { PROJECT_SECTIONS } from '../../data/projects'
 import { useLanguage } from '../../context/LanguageContext'
 

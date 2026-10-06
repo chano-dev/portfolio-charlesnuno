@@ -1,4 +1,4 @@
-import Typewriter from '../Typewriter'
+import Typewriter from '../shared/Typewriter'
 import { TAGLINES } from '../../data/taglines'
 import { useLanguage } from '../../context/LanguageContext'
 
