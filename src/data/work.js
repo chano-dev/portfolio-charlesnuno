@@ -39,10 +39,9 @@ const DC = 'Designer & Copywriter'
 
 export const WORK_SECTIONS = [
   {
-    id: 'master-of-ceremony',
-    title: 'Written MC & Copybattler',
-    intro:
-      "I started battling at 18, with zero experience. I went alone to watch the 6th season final and felt right at home in that world. I'd always been good at Portuguese language class, especially lyrical writing, and that gave me the confidence to try. Eight months later, I stepped onto the Elinga Teatro stage for the first time, and my opponent actually walked off mid rhyme.",
+id: 'master-of-ceremony',
+titleKey: 'work.mc',
+introKey: 'work.mc_intro',
     tabsLabel: 'Filter by context',
     tabs: [{ id: 'rrpl', label: 'RRPL' }],
     items: [
@@ -59,14 +58,13 @@ export const WORK_SECTIONS = [
       battle('lDymoxQiPL8', '2023', 'Colombiano vs Charles Nuno',
         'My last battle — also an opening one. Mentally, I already knew it would be the final one: I no longer saw myself up on that stage, or losing sleep rehearsing rhymes. Luckily, that creative spark for writing never disappeared — it just found a new stage.'),
     ],
-    skills: ['Improvisation', 'Research', 'Memorization', 'Public Speaking', 'Creative Writing', 'Communication'],
+skillKeys: ['skills.mc.1', 'skills.mc.2', 'skills.mc.3', 'skills.mc.4', 'skills.mc.5', 'skills.mc.6'],
   },
 
   {
-    id: 'content-creator-video-editor',
-    title: 'Content Creator & Video Editor',
-    intro:
-      "I've always loved reports and documentaries, and learning English early helped me see how they hook an audience's attention. My first report was audio only: I wasn't let into a press conference, so I interviewed the fans stuck outside with me. Not long after, I filmed for the first time, and it was after covering the African MMA Championship that I truly realized I had a talent for this.",
+id: 'content-creator-video-editor',
+titleKey: 'work.rv',
+introKey: 'work.rv_intro',
     tabsLabel: 'Filter by context',
     tabs: [{ id: 'canal-cn', label: 'My Youtube Channel' }],
     items: [
@@ -82,14 +80,13 @@ export const WORK_SECTIONS = [
       report('AjZK7Dn13N8', '2026', 'Things are tough... February 14th',
         'I also made this one for a school assignment, but this time editing and putting the pieces together was easy. I drew inspiration from a French YouTuber to pick the theme and the questions.'),
     ],
-    skills: ['Storytelling', 'Adobe Premiere Pro', 'Sound Design', 'Interviewing', 'Scriptwriting', 'CapCut'],
+skillKeys: ['skills.rv.1', 'skills.rv.2', 'skills.rv.3', 'skills.rv.4', 'skills.rv.5', 'skills.rv.6'],
   },
 
   {
-    id: 'designer-copywriter',
-    title: 'Designer & Copywriter',
-    intro:
-      'I never saw myself doing only journalism, but I discovered a knack for words through my academic work. Since I always found making art on a computer easier than my Visual Arts classes, I started creating pieces for my own news portal, inspired by football pages sharing their designs. What fascinates me most is knowing something I wrote or designed made someone feel or act.',
+id: 'designer-copywriter',
+titleKey: 'work.dc',
+introKey: 'work.dc_intro',
     tabsLabel: 'Filter by context',
     tabs: [
       { id: 'charles-nuno', label: 'Charles Nuno' },
@@ -155,6 +152,6 @@ export const WORK_SECTIONS = [
         "A subtle background pattern built from my own initials, C and N, repeated as a soft monogram texture. It's meant to sit quietly behind the content, never louder than the words or the code, just enough presence to remind you whose site you're on.",
         ['Brand Identity', 'Illustrator', 'Figma', 'Concept']),
     ],
-    skills: ['Adobe Illustrator', 'Canva', 'Figma', 'Content Writing', 'Creativity', 'Poet'],
+skillKeys: ['skills.dc.1', 'skills.dc.2', 'skills.dc.3', 'skills.dc.4', 'skills.dc.5', 'skills.dc.6'],
   },
 ]
