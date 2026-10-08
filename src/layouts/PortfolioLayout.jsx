@@ -28,17 +28,23 @@ export default function PortfolioLayout({
   const activeData = sections.find((s) => s.id === activeSection) || sections[0]
   const currentSub = useScrollSpy(activeData?.subs?.map((sub) => sub.id) || [])
 
-  useEffect(() => {
-    const root = document.documentElement
-    if (portfolio) root.dataset.portfolio = portfolio
-    const title = portfolio === 'programming' ? 'Developer | Charles Nuno' : portfolio === 'communication' ? 'Communicator | Charles Nuno' : 'Portfolio | Charles Nuno'
-    document.title = title
-    return () => {
-      delete root.dataset.portfolio
-      document.title = 'Portfolio | Charles Nuno'
-    }
-  }, [portfolio])
+const CANONICAL_BASE = 'https://portfolio-charlesnuno.vercel.app'
 
+useEffect(() => {
+  const root = document.documentElement
+  if (portfolio) root.dataset.portfolio = portfolio
+  const title = portfolio === 'programming' ? 'Developer | Charles Nuno' : portfolio === 'communication' ? 'Communicator | Charles Nuno' : 'Portfolio | Charles Nuno'
+  document.title = title
+
+  const canonical = document.querySelector('link[rel="canonical"]')
+  if (canonical) canonical.href = `${CANONICAL_BASE}${homePath}`
+
+  return () => {
+    delete root.dataset.portfolio
+    document.title = 'Portfolio | Charles Nuno'
+    if (canonical) canonical.href = `${CANONICAL_BASE}/`
+  }
+}, [portfolio, homePath])
   useEffect(() => {
     document.body.dataset.activeSection = activeSection
     window.scrollTo(0, 0)

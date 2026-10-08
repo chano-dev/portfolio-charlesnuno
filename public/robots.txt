@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://portfolio-charlesnuno.vercel.app/sitemap.xml
