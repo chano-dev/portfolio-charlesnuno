@@ -47,7 +47,7 @@ export default function Gallery({ tabs, items, label, onSelect, hideTabs = false
               aria-label={item.local ? `${item.local}, ${item.ano}` : `${item.evento}, ${item.ano}`}
               onClick={() => onSelect(item)}
             >
-              <img src={item.img} alt={item.alt} loading="lazy" />
+              <img src={item.img} alt={item.alt} loading="lazy" decoding="async" />
               {item.type === 'video' && (
                 <span className="photo-grid__play" aria-hidden="true">
                   <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
