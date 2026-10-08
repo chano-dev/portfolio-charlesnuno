@@ -235,8 +235,8 @@ button:focus-visible,
     z-index: 1;
     width: 70%;
     height: 70%;
-    -webkit-mask-image: url('/img/mask.png');
-    mask-image: url('/img/mask.png');
+    -webkit-mask-image: url('/img/mask.webp');
+    mask-image: url('/img/mask.webp');
     -webkit-mask-size: contain;
     mask-size: contain;
     -webkit-mask-repeat: no-repeat;
@@ -251,8 +251,8 @@ button:focus-visible,
 }
 /* Developer portfolio swaps the mask silhouette for the robotic thinker */
 [data-portfolio="programming"] .portfolio-symbol__mask {
-    -webkit-mask-image: url('/img/thinker.png');
-    mask-image: url('/img/thinker.png');
+    -webkit-mask-image: url('/img/thinker.webp');
+    mask-image: url('/img/thinker.webp');
 }
 
 /* ════════════════════════════════════════════

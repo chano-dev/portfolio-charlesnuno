@@ -26,7 +26,7 @@ export const PROJECT_SECTIONS = [
       project({
         id: 'charles-nuno',
         tab: 'charles-nuno',
-        file: 'portfolio-atual.png',
+        file: 'portfolio-atual.webp',
         alt: 'Screenshot of the Charles Nuno portfolio gateway page',
         contexto: 'Front-End',
         ano: '2026',
@@ -43,7 +43,7 @@ export const PROJECT_SECTIONS = [
       project({
         id: 'edukwanzas',
         tab: 'edukwanzas',
-        file: 'edukwanzas.png',
+        file: 'edukwanzas.webp',
         alt: 'Screenshot of the EduKwanzas landing page',
         contexto: 'Front-End',
         ano: '2026',
@@ -61,7 +61,7 @@ export const PROJECT_SECTIONS = [
       project({
         id: 'candgest-viagens',
         tab: 'candgest-viagens',
-        file: 'candgest-viagens.png',
+        file: 'candgest-viagens.webp',
         alt: 'Screenshot of the Candgest Viagens landing page',
         contexto: 'Front-End',
         ano: '2026',
@@ -79,7 +79,7 @@ export const PROJECT_SECTIONS = [
       project({
         id: 'narciso-pedro',
         tab: 'narciso-pedro',
-        file: 'narciso-pedro.png',
+        file: 'narciso-pedro.webp',
         alt: 'Screenshot of the Narciso Pedro professional profile landing page',
         contexto: 'Front-End',
         ano: '2026',
@@ -97,7 +97,7 @@ export const PROJECT_SECTIONS = [
       project({
         id: 'portfolio-antigo',
         tab: 'portfolio-antigo',
-        file: 'portfolio-antigo.png',
+        file: 'portfolio-antigo.webp',
         alt: 'Screenshot of the Olympus-themed portfolio built at 42 Luanda',
         contexto: 'Front-End',
         ano: '2026',
@@ -136,7 +136,7 @@ export const PROJECT_SECTIONS = [
       project({
         id: 'molley-office',
         tab: 'molley-office',
-        file: 'molley-office.png',
+        file: 'molley-office.webp',
         alt: 'Screenshot of the Molley Office internal management system',
         contexto: 'Back-End',
         ano: '2025',
@@ -155,7 +155,7 @@ export const PROJECT_SECTIONS = [
       project({
         id: 'youtube-downloader',
         tab: 'youtube-downloader',
-        file: 'youtube-downloader.png',
+        file: 'youtube-downloader.webp',
         alt: 'Screenshot of the YouTube Downloader application',
         contexto: 'Back-End',
         ano: '2026',

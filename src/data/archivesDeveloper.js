@@ -11,7 +11,7 @@ export const ARCHIVES_DEVELOPER = [
     evento: 'Log In event',
     descricao:
       'This was the second event I attended, Log In, as part of my journey to becoming a programmer. It inspired me even further about the IT field, which led me to take my first web development course the following month.',
-    img: '/img/isaf.jpg',
+    img: '/img/isaf.webp',
     alt: 'Charles at the Log In event, Academia BAI',
   },
   {
@@ -23,7 +23,7 @@ export const ARCHIVES_DEVELOPER = [
     evento: 'Unitel Startup Summit',
     descricao:
       'It was after Unitel Startup Summit that I decided my degree alone wouldn\'t be enough for today\'s globalized world, and that, besides being a polyglot, I also needed to know how to communicate with computers. Even though I had studied Python during quarantine (yes, with Gustavo Guanabara), I consider this event the genesis of my programming journey.',
-    img: '/img/startup-summit.jpg',
+    img: '/img/startup-summit.webp',
     alt: 'Charles at Unitel Startup Summit',
   },
   {
@@ -35,7 +35,7 @@ export const ARCHIVES_DEVELOPER = [
     evento: 'Professional 5.0 seminar',
     descricao:
       "This event, a seminar on Professional 5.0 and entrepreneurship, helped me understand what the job market expects from recent graduates. It's not so much about experience, it's more about prior knowledge of the software used in the field. In this talk, I basically learned the concept of SaaS and what it means to be a 5.0 professional.",
-    img: '/img/oscar-ribas.jpg',
+    img: '/img/oscar-ribas.webp',
     alt: 'Charles at the Professional 5.0 seminar, Universidade Óscar Ribas',
   },
   {
@@ -47,7 +47,7 @@ export const ARCHIVES_DEVELOPER = [
     evento: 'Agriculture and technology conference',
     descricao:
       "This photo captures the era when I showed up to every conference, seminar, or event going. It also marks the first time I stayed at the Epic Sana Hotel, and, as Angola's first president once said, \u201cWe shall return.\u201d",
-    img: '/img/epic.jpg',
+    img: '/img/epic.webp',
     alt: 'Charles watching a conference about agriculture and technology',
   },
   {
@@ -59,7 +59,7 @@ export const ARCHIVES_DEVELOPER = [
     evento: 'Programming competition',
     descricao:
       "This is the classic 'group photo' (the one taken by an event's members, participants, and organizers right after it wraps up). This time, the event was Coding Angola, a programming competition where I entered the front-end category, but didn't win.",
-    img: '/img/coding.jpg',
+    img: '/img/coding.webp',
     alt: 'Charles with the organization and competitors of Coding Angola',
   },
 ]
